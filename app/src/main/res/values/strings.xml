@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GuideRunner2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <string-array name="language">
+            <item>English</item>
+            <item>Hungarian</item>
+            <item>Spanish</item>
+        </string-array>
+
+</resources>

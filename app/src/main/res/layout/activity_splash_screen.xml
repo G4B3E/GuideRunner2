@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="version 0.1.0"
+        android:fontFamily="@font/majormonodisplayregular"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="guideRunneR"
+        android:fontFamily="@font/majormonodisplayregular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110sp"
+        android:layout_marginBottom="200sp"
+        android:textSize="40dp"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/ProgressBar"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_bar_blue"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" go fAsteR and fuRther to Achieve youR fAstest time!"
+            android:fontFamily="@font/majormonodisplayregular"
+            android:textSize="20dp"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

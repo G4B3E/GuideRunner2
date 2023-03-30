@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsFragment"
+    android:background="#050505"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:layout_marginTop="2sp"
+            android:layout_marginStart="2sp"
+            android:layout_marginBottom="2sp"
+            android:id="@+id/Hir01"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Steam Deck Now Supports Local Network Downloads"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="2sp"
+                android:layout_marginBottom="2sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Valve enables yet another important upgrade for the Steam Deck, making it possible for users to download game files via their local network."
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="2sp"
+                android:layout_marginBottom="2sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:layout_marginTop="3sp"
+            android:layout_marginStart="2sp"
+            android:layout_marginBottom="2sp"
+            android:id="@+id/Hir02"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="In Call of Duty's latest update, Modern Warfare 2 got all the love"
+                android:textSize="15sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="2sp"
+                android:layout_marginBottom="2sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="A new map, gun, and party modes arrived in Modern Warfare 2 today."
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="2sp"
+                android:layout_marginBottom="2sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

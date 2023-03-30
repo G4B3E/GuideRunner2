@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:background="#050505"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:backgroundTintMode="@color/black"
+            android:layout_marginStart="2sp"
+            android:layout_marginBottom="2sp"
+            android:fontFamily="monospace"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AddSpeedRunRecord"
+            android:gravity="center"
+            android:text="Add Speedrun Record"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:backgroundTintMode="@color/black"
+            android:layout_marginStart="2sp"
+            android:layout_marginBottom="2sp"
+            android:layout_marginTop="2sp"
+            android:fontFamily="monospace"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Added Records"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:backgroundTintMode="@color/black"
+            android:layout_marginStart="2sp"
+            android:layout_marginBottom="2sp"
+            android:layout_marginTop="2sp"
+            android:fontFamily="monospace"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Color Guessr"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:backgroundTintMode="@color/black"
+            android:layout_marginStart="2sp"
+            android:layout_marginBottom="2sp"
+            android:layout_marginTop="2sp"
+            android:fontFamily="monospace"/>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
