@@ -71,7 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/EmailEditText"
-                android:hint="Email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
                 android:fontFamily="@font/majormonodisplayregular" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +90,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/PasswordEditText"
-                android:hint="Password"
+                android:hint="@string/password"
+                android:inputType="textPassword"
                 android:fontFamily="@font/majormonodisplayregular" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,7 +106,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LogIn"
+                android:text="@string/login"
                 android:id="@+id/ToLogIn"
                 app:cornerRadius="100dp"
                 android:backgroundTint="@color/white"
@@ -116,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="SignUp"
+                android:text="@string/signup"
                 android:id="@+id/SignUp"
                 app:cornerRadius="100dp" />
         </LinearLayout>
@@ -124,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="continue without an account"
+            android:text="@string/continue_without_an_account"
             android:id="@+id/ToMenu"
             app:cornerRadius="100dp"
             android:backgroundTint="@color/white"

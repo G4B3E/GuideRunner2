@@ -1,13 +1,39 @@
 <resources>
-    <string name="app_name">GuideRunner2</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name" translatable="false">GuideRunner2</string>
     <string name="SignUpTitle">signup</string>
-    <string name="username">Username</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="signup">signup</string>
+    <string name="continue_without_an_account">continue without an account</string>
+    <string name="email">email</string>
+    <string name="news">News</string>
+    <string name="gallery">Library</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="languages">languages</string>
+    <string name="notification">notifications</string>
+    <string name="username_profile">username:</string>
+    <string name="added_speedruns">added speedruns:</string>
+    <string name="add_speedrun">add speedrun</string>
+    <string name="records">records</string>
+    <string name="delete_account">delete Account</string>
+    <string name="logout">logout</string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+    <string name="back">back</string>
+    <string name="game">game</string>
+    <string name="platform">platform</string>
+    <string name="time">time</string>
+    <string name="difficulty">difficulty</string>
+    <string name="link">link</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
+    <string name="news_notif">news</string>
+    <string name="games_notif">games</string>
 
-    <string-array name="language">
-            <item>English</item>
-            <item>Hungarian</item>
-            <item>Spanish</item>
-        </string-array>
-
+    <string-array name="language_option">
+        <item>English</item>
+        <item>Hungarian</item>
+    </string-array>
 </resources>

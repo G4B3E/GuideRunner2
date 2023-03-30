@@ -36,9 +36,6 @@ public class BottomNav extends AppCompatActivity {
                 case R.id.Profile:
                     replaceFragment(new ProfileFragment());
                     break;
-                case R.id.Settings:
-                    replaceFragment(new SettingsFragment());
-                    break;
 
             }
 

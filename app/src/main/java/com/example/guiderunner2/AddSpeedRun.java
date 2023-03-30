@@ -14,93 +14,78 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 
-public class SignUp extends AppCompatActivity {
+public class AddSpeedRun extends AppCompatActivity {
 
-    private Button ToMenu;
-    private Button ToLogIn;
-    private Button SignUp;
-
-    private EditText UsernameEditText;
-    private EditText EmailEditText;
-    private EditText PasswordEditText;
+    public EditText EditTextGame;
+    public EditText EditTextTime;
+    public EditText EditTextPlatform;
+    public EditText EditTextDifficulty;
+    public EditText EditTextLink;
+    public Button ButtonSendSpeedRun;
+    private Button ButtonCancel;
 
     boolean isAllFieldsChecked = false;
 
-    public String URL = "http://10.0.2.2:3000/newaccount";
+    public String URL = "http://10.0.2.2:3000/newrecord";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_add_speed_run);
         init();
-
-        SignUp.setOnClickListener(new View.OnClickListener() {
+        ButtonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isAllFieldsChecked = CheckAllFields();
-                if (isAllFieldsChecked) {
-                    String username = UsernameEditText.getText().toString();
-                    String email = EmailEditText.getText().toString();
-                    String password = PasswordEditText.getText().toString();
-
-
-                    Users users = new Users(username, email, password);
-                    Gson json = new Gson();
-                    RequestTask task = new RequestTask(URL, "POST", json.toJson(users));
-                    task.execute();
-                }
-
-            }
-        });
-
-        ToLogIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this,LogIn.class);
+                Intent intent = new Intent(AddSpeedRun.this,BottomNav.class);
                 startActivity(intent);
                 finish();
             }
         });
-        ToMenu.setOnClickListener(new View.OnClickListener() {
+        ButtonSendSpeedRun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this,BottomNav.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        SignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                isAllFieldsChecked = CheckAllFields();
-            }
-        });
-    }
-    private  void init(){
-        ToMenu = findViewById(R.id.ToMenu);
-        ToLogIn = findViewById(R.id.ToLogIn);
-        SignUp = findViewById(R.id.SignUp);
-        UsernameEditText = findViewById(R.id.UsernameEditText);
-        EmailEditText = findViewById(R.id.EmailEditText);
-        PasswordEditText = findViewById(R.id.PasswordEditText);
+                if ( isAllFieldsChecked = CheckAllFields()){
+                String game = EditTextGame.getText().toString();
+                String time = EditTextTime.getText().toString();
+                String platform = EditTextPlatform.getText().toString();
+                String difficulty = EditTextDifficulty.getText().toString();
+                String youtubelink = EditTextLink.getText().toString();
 
+                Records records = new Records(game, time, platform, difficulty, youtubelink);
+                Gson json = new Gson();
+                AddSpeedRun.RequestTask task = new AddSpeedRun.RequestTask(URL, "POST", json.toJson(records));
+                task.execute();
+            }
+            }
+        });
     }
     private boolean CheckAllFields() {
-        if (EmailEditText.length() == 0) {
-            EmailEditText.setError("Email is required");
+        if (EditTextGame.length() == 0) {
+            EditTextGame.setError("Game name is required");
             return false;
         }
-        if (PasswordEditText.length() == 0) {
-            PasswordEditText.setError("Password is required");
+        if (EditTextTime.length() == 0) {
+            EditTextTime.setError("Time is required");
             return false;
-        } else if (PasswordEditText.length() < 8) {
-            PasswordEditText.setError("Password must be minimum 8 characters");
+        }if (EditTextPlatform.length() == 0) {
+            EditTextPlatform.setError("Platform is required");
             return false;
-        } else if (PasswordEditText.length() > 20) {
-            PasswordEditText.setError("Password must be max 20 characters");
+        }
+        if (EditTextDifficulty.length() == 0) {
+            EditTextDifficulty.setError("Difficulty is required");
 
-        }
+        }if (EditTextLink.length() == 0) {
+            EditTextLink.setError("Youtube link is required");}
         return true;
+    }
+    private void init(){
+        EditTextGame = findViewById(R.id.EditTextGame);
+        EditTextTime = findViewById(R.id.EditTextTime);
+        EditTextPlatform = findViewById(R.id.EditTextPlatform);
+        EditTextDifficulty = findViewById(R.id.EditTextDifficulty);
+        EditTextLink = findViewById(R.id.EditTextLink);
+        ButtonSendSpeedRun = findViewById(R.id.ButtonSendSpeedRun);
+        ButtonCancel = findViewById(R.id.ButtonCancel);
     }
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
@@ -138,7 +123,7 @@ public class SignUp extends AppCompatActivity {
                         break;
                 }
             } catch (IOException e) {
-                Toast.makeText(SignUp.this,
+                Toast.makeText(AddSpeedRun.this,
                         e.toString(), Toast.LENGTH_SHORT).show();
             }
             return response;
@@ -155,19 +140,19 @@ public class SignUp extends AppCompatActivity {
             super.onPostExecute(response);
 
             if (response.getResponseCode() >= 400) {
-                Toast.makeText(SignUp.this,
+                Toast.makeText(AddSpeedRun.this,
                         "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
-                Toast.makeText(SignUp.this,
+                Toast.makeText(AddSpeedRun.this,
                         ""+response.getContent(), Toast.LENGTH_LONG).show();
                 return;
             } else {
-                Toast.makeText(SignUp.this, "Sikeres regisztráció", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddSpeedRun.this, "Sikeres feltöltés, köszönjük!", Toast.LENGTH_SHORT).show();
             }
             switch (requestType) {
                 case "GET":
                     break;
                 case "POST":
-                    Intent intent = new Intent(SignUp.this, LogIn.class);
+                    Intent intent = new Intent(AddSpeedRun.this, BottomNav.class);
                     startActivity(intent);
                     finish();
                     break;

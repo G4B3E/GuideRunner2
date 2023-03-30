@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GuideRunner2</string>
-    <string name="SignUpTitle">magyxar</string>
-    <string name="username">Felhasználónév</string>
+    <string name="SignUpTitle">regisztracio</string>
+    <string name="username">felhasznalonev</string>
+    <string name="password">jelszo</string>
+    <string name="login">bejelentkezes</string>
+    <string name="signup">regisztracio</string>
+    <string name="continue_without_an_account">folytatas fiok nelkul</string>
+    <string name="email">email</string>
+    <string name="news">Hírek</string>
+    <string name="gallery">Könyvtár</string>
+    <string name="profile">Profil</string>
+    <string name="settings">Beállítások</string>
+    <string name="languages">nyelvek</string>
+    <string name="notification">értesítések</string>
+    <string name="username_profile">felhasznalonev:</string>
+    <string name="added_speedruns">hozzaadott speedrun-ok szama:</string>
+    <string name="add_speedrun">speedrun hozzaadasa</string>
+    <string name="records">rekordok</string>
+    <string name="delete_account">fiók törlése</string>
+    <string name="logout">kijelentkezés</string>
+    <string name="on">be</string>
+    <string name="off">ki</string>
+    <string name="back">vissza</string>
+    <string name="game">jatek</string>
+    <string name="platform">platform</string>
+    <string name="time">ido</string>
+    <string name="difficulty">nehezseg</string>
+    <string name="link">link</string>
+    <string name="cancel">megse</string>
+    <string name="send">kuldes</string>
+    <string name="news_notif">hírek</string>
+    <string name="games_notif">játékok</string>
+
+
 </resources>
