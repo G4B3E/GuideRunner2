@@ -16,8 +16,8 @@ import java.io.IOException;
 
 public class SignUp extends AppCompatActivity {
 
-    private Button ToMenu;
-    private Button ToLogIn;
+
+    private Button Back;
     private Button SignUp;
 
     private EditText UsernameEditText;
@@ -53,22 +53,17 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        ToLogIn.setOnClickListener(new View.OnClickListener() {
+        Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this,LogIn.class);
+                Intent intent = new Intent(SignUp.this, OpenScreenMenu.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(R.anim.slide_in_right,
+                        R.anim.slide_out_left);
             }
         });
-        ToMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this,BottomNav.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,8 +72,7 @@ public class SignUp extends AppCompatActivity {
         });
     }
     private  void init(){
-        ToMenu = findViewById(R.id.ToMenu);
-        ToLogIn = findViewById(R.id.ToLogIn);
+        Back = findViewById(R.id.Back);
         SignUp = findViewById(R.id.SignUp);
         UsernameEditText = findViewById(R.id.UsernameEditText);
         EmailEditText = findViewById(R.id.EmailEditText);
@@ -86,6 +80,18 @@ public class SignUp extends AppCompatActivity {
 
     }
     private boolean CheckAllFields() {
+        if (UsernameEditText.length() == 0) {
+            UsernameEditText.setError("Username is required");
+            return false;
+        }
+        else if (UsernameEditText.length() < 5) {
+            UsernameEditText.setError("Username cannot be less than 6 characters");
+            return false;
+        }
+        else if (UsernameEditText.length() > 20) {
+            UsernameEditText.setError("Username cannot be more than 20 characters");
+            return false;
+        }
         if (EmailEditText.length() == 0) {
             EmailEditText.setError("Email is required");
             return false;
@@ -94,11 +100,11 @@ public class SignUp extends AppCompatActivity {
             PasswordEditText.setError("Password is required");
             return false;
         } else if (PasswordEditText.length() < 8) {
-            PasswordEditText.setError("Password must be minimum 8 characters");
+            PasswordEditText.setError("Password cannnot be less than 8 characters");
             return false;
         } else if (PasswordEditText.length() > 20) {
-            PasswordEditText.setError("Password must be max 20 characters");
-
+            PasswordEditText.setError("Password cannnot be more than 20 characters");
+            return false;
         }
         return true;
     }

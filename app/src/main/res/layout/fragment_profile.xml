@@ -4,83 +4,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment"
-    android:background="#050505"
+    android:background="#210b1b"
     android:orientation="vertical">
+
+
+
+
     <com.google.android.material.textview.MaterialTextView
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/profile"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:fontFamily="@font/majormonodisplayregular"
+        android:text="Profile"
+        android:textColor="#9d654c"
+        android:textSize="60sp"
+        android:fontFamily="@font/monoregular"
         android:layout_marginTop="10sp"
         />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/username_profile"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:fontFamily="@font/majormonodisplayregular"
-            android:layout_marginTop="10sp"
-            />
-            <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:fontFamily="@font/majormonodisplayregular"
-            android:layout_marginTop="10sp"
-            android:id="@+id/UsernameFromDatabase" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/added_speedruns"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:fontFamily="@font/majormonodisplayregular"
-            android:layout_marginTop="10sp"
-            />
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:fontFamily="@font/majormonodisplayregular"
-            android:layout_marginTop="10sp"
-            android:id="@+id/NumberOfAddedSpeedruns"
-            />
-
-
-    </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="30sp">
+        android:layout_marginTop="10sp">
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/AddSpeedRun"
                 android:gravity="center"
-                android:text="@string/add_speedrun"
+                android:text="add speedrun"
                 android:textColor="@color/white"
-                android:background="@drawable/border"
+                android:background="@drawable/edittext"
+                android:backgroundTint="#9d654c"
                 android:layout_marginStart="2sp"
                 android:layout_marginEnd="2sp"
                 android:layout_marginBottom="2sp"
@@ -91,9 +47,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/Records"
                 android:gravity="center"
-                android:text="@string/records"
+                android:text="my records"
                 android:textColor="@color/white"
-                android:background="@drawable/border"
+                android:background="@drawable/edittext"
                 android:layout_marginStart="2sp"
                 android:layout_marginEnd="2sp"
                 android:layout_marginBottom="2sp"
@@ -102,20 +58,29 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/Settings"
+                android:id="@+id/Recent_Speedruns"
                 android:gravity="center"
-                android:text="@string/settings"
+                android:text="Recent Speedruns"
                 android:textColor="@color/white"
-                android:background="@drawable/border"
+                android:background="@drawable/edittext"
                 android:layout_marginStart="2sp"
                 android:layout_marginEnd="2sp"
                 android:layout_marginBottom="2sp"
                 android:layout_marginTop="2sp"
                 android:fontFamily="monospace"/>
-
-
-
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/AboutUs"
+                android:gravity="center"
+                android:text="about us"
+                android:textColor="@color/white"
+                android:background="@drawable/edittext"
+                android:layout_marginStart="2sp"
+                android:layout_marginEnd="2sp"
+                android:layout_marginBottom="2sp"
+                android:layout_marginTop="2sp"
+                android:fontFamily="monospace"/>
 
     </LinearLayout>
 
@@ -127,10 +92,10 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#420601"
-            android:text="@string/delete_account"
+            android:backgroundTint="#F44336"
+            android:text="delete account"
             android:id="@+id/DeleteAccount"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="monospace"
             android:layout_marginEnd="11sp" />
 
@@ -139,8 +104,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            android:text="@string/logout"
+            android:backgroundTint="#9d654c"
+            android:text="logout"
             android:id="@+id/LogOut"
              />
     </LinearLayout>

@@ -31,9 +31,8 @@
     <string name="send">Send</string>
     <string name="news_notif">news</string>
     <string name="games_notif">games</string>
+    <string name="english">English</string>
+    <string name="hungarian">Magyar</string>
 
-    <string-array name="language_option">
-        <item>English</item>
-        <item>Hungarian</item>
-    </string-array>
+
 </resources>

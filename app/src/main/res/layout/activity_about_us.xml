@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutUs"
+    android:background="#210b1b"
+    >
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="About Us"
+        android:textSize="40sp"
+        android:textColor="#9d654c"
+        android:fontFamily="@font/monoregular"
+        android:layout_marginBottom="50sp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="GuideRunner is a speedrunning app designed to help players optimize their gameplay and achieve record-breaking speeds, with comprehensive guides and intuitive interface.Our team goal is to create the most useful and informative speedrunning app on the market."
+        android:textSize="20sp"
+        android:textColor="#9d654c"
+        android:fontFamily="@font/monoregular"
+        android:layout_marginBottom="100sp"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Follow us on :"
+        android:textSize="20sp"
+        android:textColor="#9d654c"
+        android:fontFamily="@font/monoregular"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instagram"
+        android:background="@drawable/aaa"
+        android:layout_marginEnd="20sp"
+        android:id="@+id/Instagram"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/twitter"
+        android:background="@drawable/aaa"
+        android:layout_marginEnd="20sp"
+        android:id="@+id/Twitter"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebook"
+        android:background="@drawable/aaa"
+        android:id="@+id/Facebook"
+        android:layout_marginBottom="20sp"
+        />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Our team : "
+        android:textSize="20sp"
+        android:textColor="#9d654c"
+        android:fontFamily="@font/monoregular"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Web/Backend : paltsm"
+        android:textSize="20sp"
+        android:textColor="#9d654c"
+        android:fontFamily="@font/monoregular"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Android/Backend : GA._.BE"
+        android:textSize="20sp"
+        android:textColor="#9d654c"
+        android:fontFamily="@font/monoregular"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/Back"
+            android:background="@drawable/edittext"
+            android:layout_marginBottom="10sp"/>
+
+    </LinearLayout>
+</LinearLayout>

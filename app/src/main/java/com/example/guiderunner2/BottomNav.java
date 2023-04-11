@@ -31,7 +31,7 @@ public class BottomNav extends AppCompatActivity {
                     replaceFragment(new NewsFragment());
                     break;
                 case R.id.Gallery:
-                    replaceFragment(new GameGalleryFragment());
+                    replaceFragment(new GameLibraryFragment());
                     break;
                 case R.id.Profile:
                     replaceFragment(new ProfileFragment());

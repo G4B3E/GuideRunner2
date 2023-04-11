@@ -15,7 +15,7 @@ public class ProfileFragment extends Fragment {
 
     private Button AddSpeedRun;
     private Button Records;
-    private Button Settings;
+    private Button AboutUs;
 
 
     @Override
@@ -27,15 +27,15 @@ public class ProfileFragment extends Fragment {
         AddSpeedRun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(),AddSpeedRun.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(),SubmitSpeedRun.class);
                 startActivity(intent);
 
             }
         });
-        Settings.setOnClickListener(new View.OnClickListener() {
+        AboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(),Settings.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(),AboutUs.class);
                 startActivity(intent);
 
             }
@@ -45,6 +45,6 @@ public class ProfileFragment extends Fragment {
     public void init(View view){
         AddSpeedRun = view.findViewById(R.id.AddSpeedRun);
         Records = view.findViewById(R.id.Records);
-        Settings = view.findViewById(R.id.Settings);
+        AboutUs = view.findViewById(R.id.AboutUs);
     }
 }

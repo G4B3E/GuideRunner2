@@ -12,10 +12,13 @@
         android:theme="@style/Theme.Default"
         tools:targetApi="31">
         <activity
-            android:name=".AddSpeedRun"
+            android:name=".AboutUs"
             android:exported="false" />
         <activity
-            android:name=".Settings"
+            android:name=".SubmitSpeedRun"
+            android:exported="false" />
+        <activity
+            android:name=".OpenScreenMenu"
             android:exported="false" />
         <activity
             android:name=".BottomNav"

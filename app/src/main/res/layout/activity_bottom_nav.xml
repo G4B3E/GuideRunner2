@@ -25,8 +25,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"
-        android:background="#000000"
-        app:itemIconTint="#0268BA"
+        android:background="#210b1b"
+        app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
 
         />

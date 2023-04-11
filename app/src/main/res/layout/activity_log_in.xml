@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogIn"
-    android:background="@color/black">
+    android:background="#210b1b"
+    android:gravity="center">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
         >
@@ -18,66 +19,46 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="guiderunner"
-            android:textColor="@color/white"
-            android:textSize="40sp"
-            android:fontFamily="@font/majormonodisplayregular"/>
+            android:text="GuideRunner"
+            android:textColor="#9d654c"
+            android:textSize="60sp"
+            android:fontFamily="@font/monoregular"/>
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:fontFamily="@font/majormonodisplayregular"
-            android:textColor="@color/white"
+            android:text="LogIn"
+            android:fontFamily="@font/monoregular"
+            android:textColor="#9d654c"
             android:textSize="30sp"
             />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="370sp"
+            android:layout_height="45sp"
+            android:id="@+id/EmailEditText"
+            android:hint="email"
+            android:textColorHint="#404040"
+            android:paddingStart="10sp"
+            android:inputType="textEmailAddress"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="3sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/edittext"/>
 
 
-
-
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="360dp"
-            android:layout_height="50dp"
-            app:boxBackgroundColor="#0268BA"
-            app:hintTextColor="@color/white"
-            android:textColorHint="@color/white"
-            app:placeholderTextColor="@color/white"
-            app:boxStrokeColor="@color/white"
-            android:layout_marginBottom="3dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/EmailEditText"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"
-                android:fontFamily="@font/majormonodisplayregular"
-                android:layout_marginBottom="3sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="360dp"
-            android:layout_height="50dp"
-            app:boxBackgroundColor="#0268BA"
-            app:hintTextColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            app:placeholderTextColor="@color/white"
-            app:boxStrokeColor="@color/white"
-            android:layout_marginBottom="3dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/PasswordEditText"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:fontFamily="@font/majormonodisplayregular" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="370sp"
+            android:layout_height="45sp"
+            android:id="@+id/PasswordEditText"
+            android:hint="password"
+            android:textColorHint="#404040"
+            android:paddingStart="10sp"
+            android:inputType="textEmailAddress"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="3sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/edittext"/>
 
 
 
@@ -87,34 +68,28 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center">
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:text="@string/signup"
-                android:id="@+id/ToSignUp"
-                android:textColor="@color/black"
-                app:cornerRadius="100dp"
-                android:fontFamily="monospace"
-                android:layout_marginEnd="11sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
+                android:layout_width="100sp"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="@string/login"
+                android:backgroundTint="#fde8d9"
+                android:text="back"
+                android:textColor="@color/black"
+                android:id="@+id/Back"
+                app:cornerRadius="20sp"
+                android:layout_marginEnd="10sp"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:backgroundTint="#9d654c"
+                android:textColor="@color/white"
+                android:text="login"
                 android:id="@+id/LogIn"
-                app:cornerRadius="100dp" />
+                app:cornerRadius="20sp" />
         </LinearLayout>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:text="@string/continue_without_an_account"
-            android:id="@+id/ToMenu"
-            app:cornerRadius="100dp"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"/>
+
 
     </LinearLayout>
 </LinearLayout>

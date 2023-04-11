@@ -17,9 +17,10 @@ import java.io.IOException;
 
 public class LogIn extends AppCompatActivity {
 
-    private Button ToMenu;
+
     private Button LogIn;
-    private Button ToSignUp;
+    private Button Back;
+
 
     private EditText EmailEditText;
 
@@ -35,22 +36,6 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         init();
-        ToSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LogIn.this,SignUp.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        ToMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LogIn.this,BottomNav.class);
-                startActivity(intent);
-                finish();
-            }
-        });
         LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,14 +53,23 @@ public class LogIn extends AppCompatActivity {
 
             }
         });
+        Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LogIn.this, OpenScreenMenu.class);
+                startActivity(intent);
+                finish();
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
+            }
+        });
     }
 
     private  void init(){
-        ToMenu = findViewById(R.id.ToMenu);
         LogIn = findViewById(R.id.LogIn);
-        ToSignUp = findViewById(R.id.ToSignUp);
         EmailEditText = findViewById(R.id.EmailEditText);
         PasswordEditText = findViewById(R.id.PasswordEditText);
+        Back = findViewById(R.id.Back);
     }
     private boolean CheckAllFields() {
         if (EmailEditText.length() == 0) {
@@ -86,10 +80,10 @@ public class LogIn extends AppCompatActivity {
             PasswordEditText.setError("Password is required");
             return false;
         } else if (PasswordEditText.length() < 8) {
-            PasswordEditText.setError("Password must be minimum 8 characters");
+            PasswordEditText.setError("Password cannnot be less than 8 characters");
             return false;
         } else if (PasswordEditText.length() > 20) {
-            PasswordEditText.setError("Password must be max 20 characters");
+            PasswordEditText.setError("Password cannnot be more than 20 characters");
 
         }
         return true;
@@ -152,7 +146,12 @@ public class LogIn extends AppCompatActivity {
                 Toast.makeText(LogIn.this,
                         ""+response.getContent(), Toast.LENGTH_LONG).show();
                 return;
-            } else {
+            } else if (response.getResponseCode() == 403){
+                Toast.makeText(LogIn.this,
+                        "Kérem csatlakozzon az internetkez!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            else {
                 Toast.makeText(LogIn.this, "Sikeres bejelentkezés", Toast.LENGTH_SHORT).show();
             }
             switch (requestType) {
