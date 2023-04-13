@@ -25,7 +25,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LogIn"
+            android:text="SignUp"
             android:fontFamily="@font/monoregular"
             android:textColor="#9d654c"
             android:textSize="30sp"
@@ -38,7 +38,7 @@
             android:textColorHint="#404040"
             android:paddingStart="10sp"
             android:paddingEnd="10sp"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:fontFamily="monospace"
             android:layout_marginBottom="3sp"
             android:layout_marginStart="10sp"
@@ -46,6 +46,7 @@
             android:background="@drawable/edittext"
 
             />
+
 
 
         <com.google.android.material.textfield.TextInputEditText
@@ -70,7 +71,7 @@
             android:textColorHint="#404040"
             android:paddingStart="10sp"
             android:paddingEnd="10sp"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:fontFamily="monospace"
             android:layout_marginBottom="3sp"
             android:layout_marginStart="10sp"

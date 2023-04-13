@@ -26,7 +26,7 @@ public class SignUp extends AppCompatActivity {
 
     boolean isAllFieldsChecked = false;
 
-    public String URL = "http://10.0.2.2:3000/newaccount";
+    public String URL = "http://10.0.2.2:3000/accounts";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,12 +64,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        SignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                isAllFieldsChecked = CheckAllFields();
-            }
-        });
+
     }
     private  void init(){
         Back = findViewById(R.id.Back);
