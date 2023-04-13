@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Default" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#000000</item><!-- Button,etc... color -->
-        <item name="colorPrimaryVariant">#210b1b</item><!-- StatusBar -->
+        <item name="colorPrimary">#FFFFFF</item><!-- Button,etc... color -->
+        <item name="colorPrimaryVariant">#099396</item><!-- StatusBar -->
         <item name="colorOnPrimary">#FFFFFF</item><!-- Default -Button, etc...- text color -->
 
         <!-- Secondary brand color. -->

@@ -50,6 +50,7 @@ public class SubmitSpeedRun extends AppCompatActivity {
                 Intent intent = new Intent(SubmitSpeedRun.this,BottomNav.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }

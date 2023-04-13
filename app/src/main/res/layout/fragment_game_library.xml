@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameLibraryFragment"
-    android:background="#210b1b"
+    android:background="#099396"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Games"
-        android:textColor="@color/white"
+        android:textColor="#ed9b00"
         android:textSize="50sp"
         android:fontFamily="@font/monoregular"
         android:gravity="top | center"/>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/news" android:icon="@drawable/news_icon" android:id="@+id/News" />
-    <item android:title="@string/gallery" android:icon="@drawable/gamegallery_icon" android:id="@+id/Gallery" />
-    <item android:title="@string/profile" android:icon="@drawable/account_icon" android:id="@+id/Profile" />
+    <item android:title="News" android:icon="@drawable/news_icon" android:id="@+id/News" />
+    <item android:title="Speedruns" android:icon="@drawable/speed_runs" android:id="@+id/SpeedRuns" />
+    <item android:title="Library" android:icon="@drawable/gamegallery_icon" android:id="@+id/Gallery" />
+    <item android:title="Profile" android:icon="@drawable/account_icon" android:id="@+id/Profile" />
 </menu>

@@ -5,28 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="#210b1b"
+    android:background="#099396"
     android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="version 0.1.0"
-        android:fontFamily="@font/monoregular"
-        android:textSize="20sp"
         android:gravity="center"
-        android:textColor="#9d654c"/>
+        android:text="version 0.3.0"
+        android:textColor="#ed9b00"
+        android:fontFamily="@font/monoregular"
+        android:textSize="15sp"
+
+        />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GuideRunner"
-        android:fontFamily="@font/monoregular"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="110sp"
         android:layout_marginBottom="200sp"
+        android:text="GuideRunner"
+        android:textColor="#ed9b00"
+        android:fontFamily="@font/monoregular"
         android:textSize="60sp"
-        android:textColor="#9d654c"/>
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,11 +39,12 @@
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:id="@+id/ProgressBar"
+            app:lottie_rawRes="@raw/loading_bar_black"
+            android:layout_centerInParent="true"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/loading_bar"/>
+            />
 
 
     </LinearLayout>

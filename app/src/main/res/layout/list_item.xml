@@ -12,7 +12,7 @@
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/black"
+        android:textColor="#ed9b00"
         android:fontFamily="monospace"
         android:textSize="15sp"
 

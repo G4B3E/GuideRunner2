@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".OpenScreenMenu"
     android:orientation="vertical"
-    android:background="#210b1b">
+    android:background="#099396">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GuideRunner"
-            android:textColor="#9d654c"
+            android:textColor="#ed9b00"
             android:textSize="60sp"
             android:fontFamily="@font/monoregular"
             android:layout_marginBottom="30sp"
@@ -34,7 +34,7 @@
             android:text="SignUp"
             android:textColor="@color/black"
             android:fontFamily="monospace"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="#DBCFAB"
             app:cornerRadius="20sp"
             android:id="@+id/SignUp"
 
@@ -44,9 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:text="LogIn"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="monospace"
-            android:backgroundTint="#9d654c"
+            android:backgroundTint="#ed9b00"
             app:cornerRadius="20sp"
             android:id="@+id/LogIn"
             />
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:text="Skip"
-            android:textColor="#9d654c"
+            android:textColor="#ed9b00"
             android:fontFamily="monospace"
             android:backgroundTint="@color/black"
             app:cornerRadius="20sp"
@@ -70,8 +70,8 @@
             android:fontFamily="@font/monoregular"
             android:textSize="20dp"
             android:gravity="center_horizontal"
-            android:textColor="#9d654c"
-            android:layout_marginTop="60sp"
+            android:textColor="#ed9b00"
+            android:layout_marginTop="30sp"
             />
 
     </LinearLayout>

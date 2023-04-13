@@ -101,9 +101,7 @@ public class NewsFragment extends Fragment {
             try {
                 switch (requestType) {
                     case "GET":
-                        System.out.println("Szoszi");
                         response = RequestHandler.get(requestUrl);
-                        System.out.println(response);
                         break;
                     case "POST":
                         response = RequestHandler.post(requestUrl, requestParams);
@@ -130,12 +128,9 @@ public class NewsFragment extends Fragment {
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
             Gson converter = new Gson();
-            response.getResponseCode();
-            response.getContent();
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(getActivity(),
                         "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
-                Log.d("onPostExecuteError:", response.getContent());
             }
             switch (requestType) {
                 case "GET":

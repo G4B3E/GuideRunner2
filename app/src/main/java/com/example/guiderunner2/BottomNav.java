@@ -27,8 +27,12 @@ public class BottomNav extends AppCompatActivity {
         binding.BottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
 
+
                 case R.id.News:
                     replaceFragment(new NewsFragment());
+                    break;
+                case R.id.SpeedRuns:
+                    replaceFragment(new SpeedRunsFragment());
                     break;
                 case R.id.Gallery:
                     replaceFragment(new GameLibraryFragment());

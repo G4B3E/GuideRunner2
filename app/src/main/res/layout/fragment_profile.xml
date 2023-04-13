@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment"
-    android:background="#210b1b"
+    android:background="#099396"
     android:orientation="vertical">
 
 
@@ -15,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
-        android:textColor="#9d654c"
+        android:textColor="#ed9b00"
         android:textSize="60sp"
         android:fontFamily="@font/monoregular"
         android:layout_marginTop="10sp"
@@ -28,59 +29,37 @@
         android:gravity="center"
         android:layout_marginTop="10sp">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Add SpeedRun"
                 android:id="@+id/AddSpeedRun"
-                android:gravity="center"
-                android:text="add speedrun"
-                android:textColor="@color/white"
-                android:background="@drawable/edittext"
-                android:backgroundTint="#9d654c"
-                android:layout_marginStart="2sp"
-                android:layout_marginEnd="2sp"
-                android:layout_marginBottom="2sp"
-                android:layout_marginTop="2sp"
-                android:fontFamily="monospace"/>
-            <Button
+                app:cornerRadius="100dp"
+                android:backgroundTint="#DBCFAB"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                />
+
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="My Records"
                 android:id="@+id/Records"
-                android:gravity="center"
-                android:text="my records"
-                android:textColor="@color/white"
-                android:background="@drawable/edittext"
-                android:layout_marginStart="2sp"
-                android:layout_marginEnd="2sp"
-                android:layout_marginBottom="2sp"
-                android:layout_marginTop="2sp"
-                android:fontFamily="monospace"/>
-            <Button
+                app:cornerRadius="100dp"
+                android:backgroundTint="#ed9b00"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                />
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/Recent_Speedruns"
-                android:gravity="center"
-                android:text="Recent Speedruns"
-                android:textColor="@color/white"
-                android:background="@drawable/edittext"
-                android:layout_marginStart="2sp"
-                android:layout_marginEnd="2sp"
-                android:layout_marginBottom="2sp"
-                android:layout_marginTop="2sp"
-                android:fontFamily="monospace"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:text="About Us"
                 android:id="@+id/AboutUs"
-                android:gravity="center"
-                android:text="about us"
-                android:textColor="@color/white"
-                android:background="@drawable/edittext"
-                android:layout_marginStart="2sp"
-                android:layout_marginEnd="2sp"
-                android:layout_marginBottom="2sp"
-                android:layout_marginTop="2sp"
-                android:fontFamily="monospace"/>
+                app:cornerRadius="100dp"
+                android:backgroundTint="#ca6702"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                />
 
     </LinearLayout>
 
@@ -95,7 +74,7 @@
             android:backgroundTint="#F44336"
             android:text="delete account"
             android:id="@+id/DeleteAccount"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:fontFamily="monospace"
             android:layout_marginEnd="11sp" />
 
@@ -104,7 +83,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:textColor="@color/black"
-            android:backgroundTint="#9d654c"
+            android:backgroundTint="#DBCFAB"
             android:text="logout"
             android:id="@+id/LogOut"
              />

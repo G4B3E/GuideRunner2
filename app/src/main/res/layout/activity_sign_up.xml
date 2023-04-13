@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUp"
-    android:background="#210b1b"
+    android:background="#099396"
     android:gravity="center">
 
 
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GuideRunner"
-            android:textColor="#9d654c"
+            android:textColor="#ed9b00"
             android:textSize="60sp"
             android:fontFamily="@font/monoregular"/>
         <com.google.android.material.textview.MaterialTextView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="SignUp"
             android:fontFamily="@font/monoregular"
-            android:textColor="#9d654c"
+            android:textColor="#ed9b00"
             android:textSize="30sp"
             />
         <com.google.android.material.textfield.TextInputEditText
@@ -44,10 +44,7 @@
             android:layout_marginStart="10sp"
             android:layout_marginEnd="10sp"
             android:background="@drawable/edittext"
-
             />
-
-
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="370sp"
@@ -63,6 +60,7 @@
             android:layout_marginStart="10sp"
             android:layout_marginEnd="10sp"
             android:background="@drawable/edittext"/>
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="370sp"
             android:layout_height="45sp"
@@ -79,7 +77,6 @@
             android:background="@drawable/edittext"/>
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,7 +88,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
                 android:text="signup"
-                android:backgroundTint="#9d654c"
+                android:backgroundTint="#ed9b00"
+                android:textColor="@color/black"
                 android:id="@+id/SignUp"
                 app:cornerRadius="100dp"
                 android:layout_marginEnd="10sp"/>
@@ -101,12 +99,10 @@
                 android:text="Back"
                 android:id="@+id/Back"
                 app:cornerRadius="100dp"
-                android:backgroundTint="#fde8d9"
+                android:backgroundTint="#DBCFAB"
                 android:textColor="@color/black"
                 android:fontFamily="monospace"
                  />
-
-
         </LinearLayout>
 
 
