@@ -2,7 +2,9 @@ package com.example.guiderunner2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -20,11 +22,20 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this, OpenScreenMenu.class);
-                startActivity(intent);
-                finish();
-
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
+                String Token = sharedPreferences.getString("token",null);
+                if (Token != null){
+                    Intent intent = new Intent(SplashScreen.this, BottomNav.class);
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                }
+                else {
+                    Intent intent = new Intent(SplashScreen.this, OpenScreenMenu.class);
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                }
             }
         }, SPLASH_TIME_OUT);
     }

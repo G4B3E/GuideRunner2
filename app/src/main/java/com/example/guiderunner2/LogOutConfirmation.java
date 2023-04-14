@@ -16,8 +16,8 @@ import com.google.gson.Gson;
 import java.io.IOException;
 
 public class LogOutConfirmation extends AppCompatActivity {
-    private Button LogOut;
-    private Button Back;
+    private Button LogOutActivity;
+    private Button BackToProfile;
     public String URL = "http://10.0.2.2:3000/auth/logout";
 
     @Override
@@ -25,7 +25,7 @@ public class LogOutConfirmation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logout_confirmation);
         init();
-        Back.setOnClickListener(new View.OnClickListener() {
+        BackToProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LogOutConfirmation.this, BottomNav.class);
@@ -35,7 +35,7 @@ public class LogOutConfirmation extends AppCompatActivity {
                         R.anim.slide_out_right);
             }
         });
-        LogOut.setOnClickListener(new View.OnClickListener() {
+        LogOutActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 RequestTask requestTask = new RequestTask(URL, "DELETE");
@@ -45,8 +45,8 @@ public class LogOutConfirmation extends AppCompatActivity {
 
     }
     private  void init(){
-        LogOut = findViewById(R.id.LogIn);
-        Back = findViewById(R.id.Back);
+        LogOutActivity = findViewById(R.id.LogOutActivity);
+        BackToProfile = findViewById(R.id.BackToProfile);
     }
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
@@ -70,14 +70,24 @@ public class LogOutConfirmation extends AppCompatActivity {
             Response response = null;
             SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
             try {
-                switch (requestType) {
-                    case "DELETE":
-                        response = RequestHandler.delete(sharedPreferences.getString("token", null));
-                        break;
-                }
+                    switch (requestType) {
+                        case "GET":
+                            response = RequestHandler.get(requestUrl,null);
+                            break;
+                        case "POST":
+                            response = RequestHandler.post(requestUrl, requestParams,null);
+                            break;
+                        case "PUT":
+                            response = RequestHandler.put(requestUrl, requestParams,null);
+                            break;
+                        case "DELETE":
+                            response = RequestHandler.delete(requestUrl,sharedPreferences.getString("token",null));
+                            break;
+                    }
             } catch (IOException e) {}
             return response;
         }
+
 
         @Override
         protected void onPreExecute() {
@@ -88,7 +98,6 @@ public class LogOutConfirmation extends AppCompatActivity {
         @Override
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
-            Gson converter = new Gson();
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(LogOutConfirmation.this,
                         "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
@@ -110,10 +119,9 @@ public class LogOutConfirmation extends AppCompatActivity {
                     SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.remove("token");
-                    editor.apply();
+                    editor.commit();
                     Intent intent = new Intent(LogOutConfirmation.this, OpenScreenMenu.class);
                     startActivity(intent);
-                    editor.clear().apply();
                     finish();
                     break;
             }

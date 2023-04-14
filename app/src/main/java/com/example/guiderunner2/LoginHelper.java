@@ -1,10 +1,10 @@
 package com.example.guiderunner2;
 
-public class LoginUsers {
+public class LoginHelper {
     private String email;
     private String password;
 
-    public LoginUsers(String email, String password) {
+    public LoginHelper(String email, String password) {
         this.email = email;
         this.password = password;
     }

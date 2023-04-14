@@ -2,7 +2,9 @@ package com.example.guiderunner2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -45,7 +47,7 @@ public class LogIn extends AppCompatActivity {
                     String email = EmailEditText.getText().toString();
                     String password = PasswordEditText.getText().toString();
 
-                    LoginUsers users = new LoginUsers(email,password);
+                    LoginHelper users = new LoginHelper(email,password);
                     Gson json = new Gson();
                     LogIn.RequestTask task = new LogIn.RequestTask(URL,"POST",json.toJson(users));
                     task.execute();
@@ -111,16 +113,16 @@ public class LogIn extends AppCompatActivity {
             try {
                 switch (requestType) {
                     case "GET":
-                        response = RequestHandler.get(requestUrl);
+                        response = RequestHandler.get(requestUrl,null);
                         break;
                     case "POST":
-                        response = RequestHandler.post(requestUrl, requestParams);
+                        response = RequestHandler.post(requestUrl, requestParams,null);
                         break;
                     case "PUT":
-                        response = RequestHandler.put(requestUrl, requestParams);
+                        response = RequestHandler.put(requestUrl, requestParams,null);
                         break;
                     case "DELETE":
-                        response = RequestHandler.delete(requestUrl + "/" + requestParams);
+                        response = RequestHandler.delete(requestUrl + "/" + requestParams,null);
                         break;
                 }
             } catch (IOException e) {
@@ -139,6 +141,7 @@ public class LogIn extends AppCompatActivity {
         @Override
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
+            Gson converter = new Gson();
 
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(LogIn.this,
@@ -158,8 +161,15 @@ public class LogIn extends AppCompatActivity {
                 case "GET":
                     break;
                 case "POST":
+                    TokenHelper token =converter.fromJson(response.getContent(), TokenHelper.class);
+                    SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("token" , token.getToken());
+                    editor.commit();
                     Intent intent = new Intent(LogIn.this, BottomNav.class);
                     startActivity(intent);
+                    Toast.makeText(LogIn.this,
+                            "Kérem csatlakozzon az internetkez!", Toast.LENGTH_SHORT).show();
                     finish();
                     break;
                 case "PUT":
