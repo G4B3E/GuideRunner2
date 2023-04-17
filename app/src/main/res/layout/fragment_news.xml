@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,21 +7,45 @@
     android:background="#099396"
     android:orientation="vertical">
 
+   <com.google.android.material.textview.MaterialTextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="News"
+       android:fontFamily="@font/monoregular"
+       android:textSize="50sp"
+       android:textColor="#ed9b00"
+       android:gravity="top | center"
 
 
-   <ListView
+       />
+   <ScrollView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:layout_marginTop="10sp"
-       android:layout_marginStart="10sp"
-       android:layout_marginEnd="10sp"
-       android:layout_marginBottom="10sp"
-       android:divider ="#000000"
-       android:dividerHeight = "1dp"
-       android:footerDividersEnabled = "false"
-       android:headerDividersEnabled = "false"
-       android:id="@+id/list_view_news"
-       />
+       android:fillViewport="true">
+
+      <ListView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="10sp"
+          android:divider ="#000000"
+          android:dividerHeight = "1dp"
+          android:footerDividersEnabled = "true"
+          android:headerDividersEnabled = "true"
+          android:id="@+id/list_view_news"
+          android:background="#e8d7a4"
+          android:padding="3sp"
+          />
+
+   </ScrollView>
 
 
-</RelativeLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

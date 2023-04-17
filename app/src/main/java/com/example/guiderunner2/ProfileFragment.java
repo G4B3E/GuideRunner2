@@ -17,8 +17,8 @@ public class ProfileFragment extends Fragment {
     private Button Records;
     private Button AboutUs;
 
-    private Button LogOut;
-    private Button DeleteAccount;
+    private Button ToLogOut;
+    private Button ToDeleteAccount;
 
 
     @Override
@@ -43,14 +43,14 @@ public class ProfileFragment extends Fragment {
 
             }
         });
-        LogOut.setOnClickListener(new View.OnClickListener() {
+        ToLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getApplicationContext(), LogOutConfirmation.class);
                 startActivity(intent);
             }
         });
-        DeleteAccount.setOnClickListener(new View.OnClickListener() {
+        ToDeleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getApplicationContext(), DeleteAccountConfirmation.class);
@@ -65,7 +65,7 @@ public class ProfileFragment extends Fragment {
         AddSpeedRun = view.findViewById(R.id.AddSpeedRun);
         Records = view.findViewById(R.id.Records);
         AboutUs = view.findViewById(R.id.AboutUs);
-        LogOut = view.findViewById(R.id.LogOut);
-        DeleteAccount = view.findViewById(R.id.DeleteAccount);
+        ToLogOut = view.findViewById(R.id.ToLogOut);
+        ToDeleteAccount = view.findViewById(R.id.ToDeleteAccount);
     }
 }

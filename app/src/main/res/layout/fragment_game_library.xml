@@ -20,7 +20,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="false">
 
 
     <GridLayout
@@ -42,7 +42,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/hades"
+                android:src="@drawable/legensdofzelda"
                 />
         </LinearLayout>
 
@@ -54,7 +54,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/skyrim"/>
+                android:src="@drawable/legendofzeldaii"/>
         </LinearLayout>
 
         <LinearLayout
@@ -65,9 +65,22 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/supermario64"/>
+                android:src="@drawable/legendsofzeldalinktothepast"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:src="@drawable/zeldabotw"
+                android:id="@+id/LegendsOFZeldaBOTW"
+
+                />
+        </LinearLayout>
 
 
         <LinearLayout
@@ -141,58 +154,6 @@
         </LinearLayout>
 
 
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center"
-            android:layout_marginBottom="10sp">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/helloneighbor"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/hitmaniii"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/residentevil2re"/>
-        </LinearLayout>
-
-
-
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center"
-            android:layout_marginBottom="10sp">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/sonicfrontier"/>
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -204,129 +165,24 @@
                 android:src="@drawable/undertale"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/zeldabotw"/>
-        </LinearLayout>
 
 
 
 
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center"
-            android:layout_marginBottom="10sp">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/halflife"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/poppyplaytimechap1"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/supermariobros"/>
-        </LinearLayout>
 
 
 
 
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center"
-            android:layout_marginBottom="10sp">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/zeldalinktothepast"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/stardewvalley"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/darksouls3"/>
-        </LinearLayout>
 
 
 
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center"
-            android:layout_marginBottom="10sp">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/crashbandicoot"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/mirrorsedge"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:src="@drawable/eldenring"/>
-        </LinearLayout>
+
+
 
 
 

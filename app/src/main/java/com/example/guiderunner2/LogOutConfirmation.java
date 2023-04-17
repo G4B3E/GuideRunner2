@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 
 public class LogOutConfirmation extends AppCompatActivity {
-    private Button LogOutActivity;
+    private Button LogOut;
     private Button BackToProfile;
     public String URL = "http://10.0.2.2:3000/auth/logout";
 
@@ -35,7 +35,7 @@ public class LogOutConfirmation extends AppCompatActivity {
                         R.anim.slide_out_right);
             }
         });
-        LogOutActivity.setOnClickListener(new View.OnClickListener() {
+        LogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 RequestTask requestTask = new RequestTask(URL, "DELETE");
@@ -45,7 +45,7 @@ public class LogOutConfirmation extends AppCompatActivity {
 
     }
     private  void init(){
-        LogOutActivity = findViewById(R.id.LogOutActivity);
+        LogOut = findViewById(R.id.LogOut);
         BackToProfile = findViewById(R.id.BackToProfile);
     }
     private class RequestTask extends AsyncTask<Void, Void, Response> {

@@ -31,35 +31,39 @@
             android:textColor="#ed9b00"
             android:textSize="30sp"
             />
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="370sp"
-            android:layout_height="45sp"
-            android:id="@+id/EmailEditText"
-            android:hint="email"
-            android:textColorHint="#404040"
-            android:paddingStart="10sp"
-            android:inputType="textEmailAddress"
-            android:fontFamily="monospace"
-            android:layout_marginBottom="3sp"
-            android:layout_marginStart="10sp"
-            android:layout_marginEnd="10sp"
-            android:background="@drawable/edittext"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="370sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/EmailEditText"
+                android:hint="email"
+                android:textColorHint="#404040"
+                android:paddingStart="10sp"
+                android:inputType="textEmailAddress"
+                android:fontFamily="monospace"
+                android:layout_margin="4sp"
+                android:background="#DBCFAB"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="370sp"
-            android:layout_height="45sp"
-            android:id="@+id/PasswordEditText"
-            android:hint="password"
-            android:textColorHint="#404040"
-            android:paddingStart="10sp"
-            android:inputType="textPassword"
-            android:fontFamily="monospace"
-            android:layout_marginBottom="3sp"
-            android:layout_marginStart="10sp"
-            android:layout_marginEnd="10sp"
-            android:background="@drawable/edittext"/>
-
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="370sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/PasswordEditText"
+                android:hint="password"
+                android:textColorHint="#404040"
+                android:paddingStart="10sp"
+                android:inputType="textPassword"
+                android:fontFamily="monospace"
+                android:layout_margin="4sp"
+                android:background="#DBCFAB"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <LinearLayout

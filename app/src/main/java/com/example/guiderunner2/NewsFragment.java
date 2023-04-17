@@ -45,9 +45,6 @@ public class NewsFragment extends Fragment {
 
     public void init(View view) {
         list_view_news = view.findViewById(R.id.list_view_news);
-
-
-
     }
     private class NewsAdapter extends ArrayAdapter<News> {
 
@@ -68,11 +65,11 @@ public class NewsFragment extends Fragment {
             TextView date = view.findViewById(R.id.date);
 
 
-            gamename.setText(actualNews.getGamename());
-            title.setText(actualNews.getTitle());
-            content.setText(actualNews.getContent());
-            source.setText(actualNews.getSource());
-            date.setText(actualNews.getDate());
+            gamename.setText("GameName : " + actualNews.getGamename());
+            title.setText("Title : " + actualNews.getTitle());
+            content.setText("Content : " + actualNews.getContent());
+            source.setText("Source : " + actualNews.getSource());
+            date.setText("Date : " + actualNews.getDate());
 
 
             return view;

@@ -39,7 +39,7 @@
                 android:text="Yes"
                 android:backgroundTint="#9c2227"
                 android:textColor="@color/black"
-                android:id="@+id/LogOutActivity"
+                android:id="@+id/LogOut"
                 app:cornerRadius="100dp"
                 android:layout_marginEnd="10sp"/>
             <com.google.android.material.button.MaterialButton

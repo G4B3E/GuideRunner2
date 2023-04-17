@@ -1,26 +1,39 @@
 package com.example.guiderunner2;
 
+import java.util.List;
+
 public class Records {
-    private String game;
+
+    private String username;
+    private String gamename;
     private String time;
     private String platform;
     private String difficulty;
     private String youtubelink;
 
-    public Records(String game, String time, String platform, String difficulty, String youtubelink) {
-        this.game = game;
+    public Records(String username, String gamename, String time, String platform, String difficulty, String youtubelink) {
+        this.username = username;
+        this.gamename = gamename;
         this.time = time;
         this.platform = platform;
         this.difficulty = difficulty;
         this.youtubelink = youtubelink;
     }
 
-    public String getGame() {
-        return game;
+    public String getUsername() {
+        return username;
     }
 
-    public void setGame(String game) {
-        this.game = game;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getGamename() {
+        return gamename;
+    }
+
+    public void setGamename(String gamename) {
+        this.gamename = gamename;
     }
 
     public String getTime() {

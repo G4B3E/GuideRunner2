@@ -18,7 +18,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Are you sure you want to logout?"
+            android:text="Are you sure you want to delete your account?"
             android:textColor="#01121a"
             android:textSize="30sp"
             android:gravity="center"
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No"
-                android:id="@+id/Back"
+                android:id="@+id/BackToProfile2"
                 app:cornerRadius="100dp"
                 android:backgroundTint="#FFFFFF"
                 android:textColor="@color/black"
