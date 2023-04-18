@@ -100,13 +100,13 @@ public class LogOutConfirmation extends AppCompatActivity {
             super.onPostExecute(response);
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(LogOutConfirmation.this,
-                        "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
+                        "You are not logged in!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(LogOutConfirmation.this,
-                        ""+response.getContent(), Toast.LENGTH_LONG).show();
+                        "You are not logged in!", Toast.LENGTH_LONG).show();
                 return;
             }
             else {
-                Toast.makeText(LogOutConfirmation.this, "Sikeres kijelentkezés", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LogOutConfirmation.this, "Checkout successful!", Toast.LENGTH_SHORT).show();
             }
             switch (requestType) {
                 case "GET":

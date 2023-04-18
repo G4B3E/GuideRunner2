@@ -16,6 +16,7 @@ import com.example.guiderunner2.games.LegendsOfZeldaBOTW;
 public class GameLibraryFragment extends Fragment {
     private ImageView LegendsOFZeldaBOTW;
     private ImageView Hades;
+    private ImageView Undertale;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +37,13 @@ public class GameLibraryFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        Undertale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), com.example.guiderunner2.games.Undertale.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
@@ -44,6 +52,7 @@ public class GameLibraryFragment extends Fragment {
     private void init(View view){
         LegendsOFZeldaBOTW = view.findViewById(R.id.LegendsOFZeldaBOTW);
         Hades = view.findViewById(R.id.Hades);
+        Undertale = view.findViewById(R.id.Undertale);
 
 
 

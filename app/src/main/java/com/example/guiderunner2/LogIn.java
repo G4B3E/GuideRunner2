@@ -145,17 +145,13 @@ public class LogIn extends AppCompatActivity {
 
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(LogIn.this,
-                        "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
+                        "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(LogIn.this,
-                        ""+response.getContent(), Toast.LENGTH_LONG).show();
-                return;
-            } else if (response.getResponseCode() == 403){
-                Toast.makeText(LogIn.this,
-                        "Kérem csatlakozzon az internetkez!", Toast.LENGTH_SHORT).show();
+                        "Please create an account or check your network!", Toast.LENGTH_LONG).show();
                 return;
             }
             else {
-                Toast.makeText(LogIn.this, "Sikeres bejelentkezés", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LogIn.this, "Successful login !", Toast.LENGTH_SHORT).show();
             }
             switch (requestType) {
                 case "GET":

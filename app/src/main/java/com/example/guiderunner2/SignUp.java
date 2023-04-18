@@ -157,12 +157,12 @@ public class SignUp extends AppCompatActivity {
 
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(SignUp.this,
-                        "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
+                        "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(SignUp.this,
-                        ""+response.getContent(), Toast.LENGTH_LONG).show();
+                        "Please your the network!"+response.getContent(), Toast.LENGTH_LONG).show();
                 return;
             } else {
-                Toast.makeText(SignUp.this, "Sikeres regisztráció", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "Successful registration!", Toast.LENGTH_SHORT).show();
             }
             switch (requestType) {
                 case "GET":

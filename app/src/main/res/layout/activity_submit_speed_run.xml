@@ -7,6 +7,9 @@
     tools:context=".SubmitSpeedRun"
     android:background="#65818C"
     android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +31,27 @@
                 android:paddingTop="10sp"
                 android:fontFamily="@font/monoregular"
                 android:layout_marginBottom="50sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:id="@+id/EditTextUserName"
+                    android:hint="username"
+                    android:textColorHint="#404040"
+                    android:paddingStart="10sp"
+                    android:paddingEnd="10sp"
+                    android:inputType="text"
+                    android:fontFamily="monospace"
+                    android:layout_marginBottom="3sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:background="#DBCFAB"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -171,6 +195,7 @@
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

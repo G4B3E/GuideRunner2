@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".games.LegendsOfZeldaBOTW"
+    tools:context=".games.Undertale"
     android:background="#65818C"
     android:orientation="vertical">
 
@@ -29,7 +29,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/zeldabotw"/>
+                android:src="@drawable/undertale"/>
 
         </LinearLayout>
 
@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Legend Of Zelda Breath Of The Wild"
+                android:text="Undertale"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/zelda" />
@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2017"
+                android:text="2015"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/zelda" />
@@ -92,7 +92,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Action-adventure"
+                android:text="Szerepjáték"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/zelda" />
@@ -112,7 +112,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nintendo switch / wii u"
+                android:text="Nintendo Switch, PlayStation 4, Xbox One, Linux, Windows, Xbox Series X|S, PlayStation Vita, Mac OS"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/zelda" />
@@ -133,7 +133,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nintendo EPD"
+                android:text="Toby Fox"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/zelda" />
@@ -169,7 +169,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="After a 100-year slumber, Link wakes up alone in a world he no longer remembers. Now the legendary hero must explore a vast and dangerous land and regain his memories before Hyrule is lost forever. Armed only with what he can scavenge, Link sets out to find answers and the resources needed to survive."
+            android:text="Many years ago, humans and monsters lived in friendship, but something happened that caused the humans to rebel against the monsters. The people drove the monsters underground and locked them in with a spell."
             android:textSize="20sp"
             android:textColor="@color/white"
             android:fontFamily="@font/zelda"
