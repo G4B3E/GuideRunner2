@@ -15,7 +15,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".LegendsOfZeldaBOTW"
+            android:name=".Hades"
+            android:exported="false" />
+        <activity
+            android:name=".games.LegendsOfZeldaBOTW"
             android:exported="false" />
         <activity
             android:name=".DeleteAccountConfirmation"

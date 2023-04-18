@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".games.LegendsOfZeldaBOTW"
-    android:background="@drawable/zeldabotwblur"
-    android:orientation="vertical">
+    tools:context=".Hades"
+    android:orientation="vertical"
+    android:background="@drawable/hadesblur"
 
+    >
 
 
     <LinearLayout
@@ -26,7 +27,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/zeldabotw"/>
+                android:src="@drawable/hades"/>
 
         </LinearLayout>
 
@@ -43,14 +44,14 @@
                 android:text="Game"
                 android:textSize="25sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda"/>
+                android:fontFamily="@font/hades"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Legend Of Zelda Breath Of The Wild"
-                android:textSize="15sp"
+                android:text="Hades"
+                android:textSize="13sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda" />
+                android:fontFamily="@font/hades" />
 
             <View
                 android:layout_width="match_parent"
@@ -65,14 +66,14 @@
                 android:text="Release"
                 android:textSize="25sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda"/>
+                android:fontFamily="@font/hades"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2017"
-                android:textSize="15sp"
+                android:text="2020"
+                android:textSize="13sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda" />
+                android:fontFamily="@font/hades" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -85,14 +86,14 @@
                 android:text="Genre"
                 android:textSize="25sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda"/>
+                android:fontFamily="@font/hades"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Action-adventure"
-                android:textSize="15sp"
+                android:text="Roguelike"
+                android:textSize="13sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda" />
+                android:fontFamily="@font/hades" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -105,14 +106,14 @@
                 android:text="Platform"
                 android:textSize="25sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda"/>
+                android:fontFamily="@font/hades"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="nintendo switch / wii u"
-                android:textSize="15sp"
+                android:text="Nintendo Switch, PlayStation 5, PlayStation 4, Xbox One, macOS, Windows, Xbox Series X|S, Mac OS"
+                android:textSize="13sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda" />
+                android:fontFamily="@font/hades" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -126,14 +127,14 @@
                 android:text="Developer"
                 android:textSize="25sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda"/>
+                android:fontFamily="@font/hades"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=" Nintendo EPD"
-                android:textSize="15sp"
+                android:text="Supergiant Games"
+                android:textSize="13sp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/zelda" />
+                android:fontFamily="@font/hades" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -150,9 +151,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Guide"
-        android:textSize="27sp"
+        android:textSize="25sp"
         android:textColor="@color/white"
-        android:fontFamily="@font/zelda"
+        android:fontFamily="@font/hades"
         android:paddingStart="5sp" />
     <View
         android:layout_width="match_parent"
@@ -168,6 +169,7 @@
         android:fontFamily="@font/monoregular"
         android:paddingStart="5sp"
         />
+
 
 
 </LinearLayout>

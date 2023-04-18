@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AboutUs"
-    android:background="#099396"
+    android:background="#65818C"
     >
 
     <com.google.android.material.textview.MaterialTextView

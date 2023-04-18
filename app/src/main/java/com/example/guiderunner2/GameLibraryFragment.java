@@ -8,26 +8,31 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.guiderunner2.games.LegendsOfZeldaBOTW;
 
 
 public class GameLibraryFragment extends Fragment {
     private ImageView LegendsOFZeldaBOTW;
+    private ImageView Hades;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_game_library, container, false);
-
+        init(view);
         LegendsOFZeldaBOTW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(),LegendsOfZeldaBOTW.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(), LegendsOfZeldaBOTW.class);
+                startActivity(intent);
+            }
+        });
+        Hades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), Hades.class);
                 startActivity(intent);
             }
         });
@@ -38,6 +43,12 @@ public class GameLibraryFragment extends Fragment {
 
     private void init(View view){
         LegendsOFZeldaBOTW = view.findViewById(R.id.LegendsOFZeldaBOTW);
+        Hades = view.findViewById(R.id.Hades);
+
+
+
+
+
     }
 
 
