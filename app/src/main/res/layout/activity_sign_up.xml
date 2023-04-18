@@ -10,7 +10,7 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
@@ -35,10 +35,11 @@
        <com.google.android.material.textfield.TextInputLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+
            >
            <com.google.android.material.textfield.TextInputEditText
-               android:layout_width="370sp"
-               android:layout_height="wrap_content"
+               android:layout_width="match_parent"
+               android:layout_height="50sp"
                android:id="@+id/UsernameEditText"
                android:hint="username"
                android:textColorHint="#404040"
@@ -60,14 +61,14 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="370sp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
                 android:id="@+id/EmailEditText"
                 android:hint="email"
                 android:textColorHint="#404040"
                 android:paddingStart="10sp"
                 android:paddingEnd="10sp"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:fontFamily="monospace"
                 android:layout_margin="4sp"
                 android:background="#DBCFAB"
@@ -80,8 +81,8 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="370sp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
                 android:id="@+id/PasswordEditText"
                 android:hint="password"
                 android:textColorHint="#404040"

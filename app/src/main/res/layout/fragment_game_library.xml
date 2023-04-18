@@ -55,7 +55,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/legendofzeldaii"/>
+                android:src="@drawable/skyrim"/>
         </LinearLayout>
 
         <LinearLayout
@@ -66,7 +66,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/legendsofzeldalinktothepast"/>
+                android:src="@drawable/supermariobros"/>
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +94,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/portal"/>
+                android:src="@drawable/residentevil2re"/>
         </LinearLayout>
 
         <LinearLayout
@@ -105,7 +105,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/portal2"/>
+                android:src="@drawable/halflife"/>
         </LinearLayout>
 
         <LinearLayout

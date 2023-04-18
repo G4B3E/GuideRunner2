@@ -36,7 +36,7 @@
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50sp"
                     android:id="@+id/EditTextGame"
                     android:hint="game"
                     android:textColorHint="#404040"
@@ -45,8 +45,8 @@
                     android:inputType="textEmailAddress"
                     android:fontFamily="monospace"
                     android:layout_marginBottom="3sp"
-                    android:layout_marginStart="10sp"
-                    android:layout_marginEnd="10sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginEnd="3sp"
                     android:background="#DBCFAB"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -58,7 +58,7 @@
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50sp"
                     android:id="@+id/EditTextPlatform"
                     android:hint="platform"
                     android:textColorHint="#404040"
@@ -67,8 +67,8 @@
                     android:inputType="textEmailAddress"
                     android:fontFamily="monospace"
                     android:layout_marginBottom="3sp"
-                    android:layout_marginStart="10sp"
-                    android:layout_marginEnd="10sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginEnd="3sp"
                     android:background="#DBCFAB"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,7 +79,7 @@
                 >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50sp"
                 android:id="@+id/EditTextTime"
                 android:hint="time"
                 android:textColorHint="#404040"
@@ -88,8 +88,8 @@
                 android:inputType="textEmailAddress"
                 android:fontFamily="monospace"
                 android:layout_marginBottom="3sp"
-                android:layout_marginStart="10sp"
-                android:layout_marginEnd="10sp"
+                android:layout_marginStart="3sp"
+                android:layout_marginEnd="3sp"
                 android:background="#DBCFAB"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,7 +100,7 @@
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50sp"
                     android:id="@+id/EditTextDifficulty"
                     android:hint="difficulty"
                     android:textColorHint="#404040"
@@ -109,8 +109,8 @@
                     android:inputType="textEmailAddress"
                     android:fontFamily="monospace"
                     android:layout_marginBottom="3sp"
-                    android:layout_marginStart="10sp"
-                    android:layout_marginEnd="10sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginEnd="3sp"
                     android:background="#DBCFAB"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -122,7 +122,7 @@
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50sp"
                     android:id="@+id/EditTextLink"
                     android:hint="link"
                     android:textColorHint="#404040"
@@ -131,8 +131,8 @@
                     android:inputType="textEmailAddress"
                     android:fontFamily="monospace"
                     android:layout_marginBottom="3sp"
-                    android:layout_marginStart="10sp"
-                    android:layout_marginEnd="10sp"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginEnd="3sp"
                     android:background="#DBCFAB"/>
 
             </com.google.android.material.textfield.TextInputLayout>

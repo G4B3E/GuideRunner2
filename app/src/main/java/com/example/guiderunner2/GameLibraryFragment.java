@@ -32,7 +32,7 @@ public class GameLibraryFragment extends Fragment {
         Hades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), Hades.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(), com.example.guiderunner2.games.Hades.class);
                 startActivity(intent);
             }
         });
