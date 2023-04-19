@@ -65,9 +65,9 @@ public class NewsFragment extends Fragment {
             TextView date = view.findViewById(R.id.date);
 
 
-            gamename.setText("GameName : " + actualNews.getGamename());
-            title.setText("Title : " + actualNews.getTitle());
-            content.setText("Content : " + actualNews.getContent());
+            gamename.setText(actualNews.getGamename());
+            title.setText(actualNews.getTitle());
+            content.setText(actualNews.getContent());
             source.setText("Source : " + actualNews.getSource());
             date.setText("Date : " + actualNews.getDate());
 
@@ -127,19 +127,22 @@ public class NewsFragment extends Fragment {
             Gson converter = new Gson();
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(getActivity(),
-                        "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
+                        "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
             }
-            switch (requestType) {
-                case "GET":
-                    NewsListHelper peopleArray = converter.fromJson(
-                            response.getContent(), NewsListHelper.class);
-                    newslist.clear();
-                    newslist.addAll(peopleArray.getNews());
-                    list_view_news.setAdapter(new NewsAdapter());
+            else {
+                switch (requestType) {
+                    case "GET":
+                        NewsListHelper peopleArray = converter.fromJson(
+                                response.getContent(), NewsListHelper.class);
+                        newslist.clear();
+                        newslist.addAll(peopleArray.getNews());
+                        list_view_news.setAdapter(new NewsAdapter());
 
 
-                    break;
+                        break;
+                }
             }
+
         }
     }
 

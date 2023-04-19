@@ -159,24 +159,26 @@ public class SignUp extends AppCompatActivity {
                 Toast.makeText(SignUp.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(SignUp.this,
-                        "Please your the network!"+response.getContent(), Toast.LENGTH_LONG).show();
+                        "The database currently not available or you are not connected to the wifi!", Toast.LENGTH_LONG).show();
                 return;
             } else {
-                Toast.makeText(SignUp.this, "Successful registration!", Toast.LENGTH_SHORT).show();
+                switch (requestType) {
+                    case "GET":
+                        break;
+                    case "POST":
+                        Intent intent = new Intent(SignUp.this, LogIn.class);
+                        startActivity(intent);
+                        finish();
+                        Toast.makeText(SignUp.this, "Successful registration!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case "PUT":
+                        break;
+                    case "DELETE":
+                        break;
+                }
+
             }
-            switch (requestType) {
-                case "GET":
-                    break;
-                case "POST":
-                    Intent intent = new Intent(SignUp.this, LogIn.class);
-                    startActivity(intent);
-                    finish();
-                    break;
-                case "PUT":
-                    break;
-                case "DELETE":
-                    break;
-            }
+
         }
     }
 }

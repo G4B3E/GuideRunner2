@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AboutUs"
-    android:background="#65818C"
+    android:background="#01121a"
     >
 
     <com.google.android.material.textview.MaterialTextView
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/instagram"
-        android:background="@drawable/aaa"
+        android:background="@drawable/transparentbackground"
         android:layout_marginEnd="20sp"
         android:id="@+id/Instagram"
         />
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/twitter"
-        android:background="@drawable/aaa"
+        android:background="@drawable/transparentbackground"
         android:layout_marginEnd="20sp"
         android:id="@+id/Twitter"
         />
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/facebook"
-        android:background="@drawable/aaa"
+        android:background="@drawable/transparentbackground"
         android:id="@+id/Facebook"
         android:layout_marginBottom="20sp"
         />

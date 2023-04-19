@@ -30,6 +30,8 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
                 Intent intent = new Intent(DeleteAccountConfirmation.this,BottomNav.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
             }
         });
         DeleteAccount.setOnClickListener(new View.OnClickListener() {
@@ -99,9 +101,12 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
             super.onPostExecute(response);
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(DeleteAccountConfirmation.this,
-                        "Please chech your network or create an account!", Toast.LENGTH_SHORT).show();
+                        "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(DeleteAccountConfirmation.this,
-                        "You are not logged in or not connected to the server!", Toast.LENGTH_LONG).show();
+                        "Please create an account or restart the app!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(DeleteAccountConfirmation.this, BottomNav.class);
+                startActivity(intent);
+                finish();
                 return;
             }
             else {

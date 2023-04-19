@@ -57,7 +57,8 @@ public class SubmitSpeedRun extends AppCompatActivity {
                 Intent intent = new Intent(SubmitSpeedRun.this,BottomNav.class);
                 startActivity(intent);
                 finish();
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
             }
         });
         Submit.setOnClickListener(new View.OnClickListener() {
@@ -103,23 +104,23 @@ public class SubmitSpeedRun extends AppCompatActivity {
             return false;
         }
         if (EditTextGame.length() == 0) {
-            EditTextGame.setError("Username is required");
+            EditTextGame.setError("Game is required");
             return false;
         }
         if (EditTextPlatform.length() == 0) {
-            EditTextPlatform.setError("Username is required");
+            EditTextPlatform.setError("Platform is required");
             return false;
         }
         if (EditTextTime.length() == 0) {
-            EditTextTime.setError("Username is required");
+            EditTextTime.setError("Time is required");
             return false;
         }
         if (EditTextDifficulty.length() == 0) {
-            EditTextDifficulty.setError("Username is required");
+            EditTextDifficulty.setError("Difficulty is required");
             return false;
         }
         if (EditTextLink.length() == 0) {
-            EditTextLink.setError("Username is required");
+            EditTextLink.setError("Link is required");
             return false;
         }
 
@@ -177,28 +178,33 @@ public class SubmitSpeedRun extends AppCompatActivity {
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
 
-            if (response.getResponseCode() >= 400) {
+            if (response.getResponseCode() >= 402) {
                 Toast.makeText(SubmitSpeedRun.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(SubmitSpeedRun.this,
                         ""+response.getContent(), Toast.LENGTH_LONG).show();
                 return;
-            } else {
-                Toast.makeText(SubmitSpeedRun.this, "Successful upload!", Toast.LENGTH_SHORT).show();
             }
-            switch (requestType) {
-                case "GET":
-                    break;
-                case "POST":
-                    Intent intent = new Intent(SubmitSpeedRun.this, BottomNav.class);
-                    startActivity(intent);
-                    finish();
-                    break;
-                case "PUT":
-                    break;
-                case "DELETE":
-                    break;
+            else {
+                switch (requestType) {
+                    case "GET":
+                        break;
+                    case "POST":
+                        Intent intent = new Intent(SubmitSpeedRun.this, BottomNav.class);
+                        startActivity(intent);
+                        finish();
+                        overridePendingTransition(R.anim.slide_in_left,
+                                R.anim.slide_out_right);
+                        Toast.makeText(SubmitSpeedRun.this, "Successful upload!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case "PUT":
+                        break;
+                    case "DELETE":
+                        break;
+                }
+
             }
+
         }
     }
 

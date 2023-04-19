@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SubmitSpeedRun"
-    android:background="#65818C"
+    android:background="#01121a"
     android:orientation="vertical">
     <ScrollView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="40sp">
+            >
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
                 android:textSize="50sp"
                 android:paddingTop="10sp"
                 android:fontFamily="@font/monoregular"
-                android:layout_marginBottom="50sp"/>
+                android:layout_marginBottom="10sp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -212,8 +212,8 @@
             android:layout_marginStart="10sp"
             android:layout_marginEnd="10sp"
             android:layout_marginBottom="10sp"
-            android:divider="@drawable/aaa"
-            android:childDivider="@drawable/aaa"
+            android:divider="@drawable/transparentbackground"
+            android:childDivider="@drawable/transparentbackground"
             />
 
     </RelativeLayout>

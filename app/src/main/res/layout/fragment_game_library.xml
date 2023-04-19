@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameLibraryFragment"
-    android:background="#65818C"
+    android:background="#01121a"
     android:orientation="vertical">
 
     <TextView
@@ -55,7 +55,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/skyrim"/>
+                android:src="@drawable/kotor"/>
         </LinearLayout>
 
         <LinearLayout
@@ -66,7 +66,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:src="@drawable/supermariobros"/>
+                android:src="@drawable/kotorii"/>
         </LinearLayout>
 
         <LinearLayout
@@ -75,7 +75,7 @@
             android:layout_columnWeight="1"
             android:gravity="center">
             <ImageView
-                android:background="@drawable/aaa"
+                android:background="@drawable/transparentbackground"
                 android:layout_width="150sp"
                 android:layout_height="150sp"
                 android:src="@drawable/zeldabotw"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="#65818C"
+    android:background="#01121a"
     android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ProgressBar"
-            app:lottie_rawRes="@raw/loading_bar_black"
+            app:lottie_rawRes="@raw/loading_bar_white"
             android:layout_centerInParent="true"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"

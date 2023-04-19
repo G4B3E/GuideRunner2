@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewsFragment"
-    android:background="#65818C"
+    android:background="#01121a"
     android:orientation="vertical">
 
    <com.google.android.material.textview.MaterialTextView
@@ -23,10 +23,7 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:layout_margin="10sp"
-          android:divider ="#000000"
-          android:dividerHeight = "1dp"
-          android:footerDividersEnabled = "true"
-          android:headerDividersEnabled = "true"
+          android:divider ="#65818C"
           android:id="@+id/list_view_news"
           android:padding="3sp"
           />

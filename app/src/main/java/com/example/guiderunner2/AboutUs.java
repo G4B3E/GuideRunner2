@@ -26,6 +26,8 @@ public class AboutUs extends AppCompatActivity {
                 Intent intent = new Intent(AboutUs.this,BottomNav.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
             }
         });
         Instagram.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +36,8 @@ public class AboutUs extends AppCompatActivity {
                 Uri uri = Uri.parse("https://www.instagram.com");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
             }
         });
         Twitter.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +46,8 @@ public class AboutUs extends AppCompatActivity {
                 Uri uri = Uri.parse("https://twitter.com/?lang=hu");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
             }
         });
         Facebook.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +56,8 @@ public class AboutUs extends AppCompatActivity {
                 Uri uri = Uri.parse("https://hu-hu.facebook.com");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
             }
         });
     }

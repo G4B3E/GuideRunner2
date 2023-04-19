@@ -147,30 +147,31 @@ public class LogIn extends AppCompatActivity {
                 Toast.makeText(LogIn.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(LogIn.this,
-                        "Please create an account or check your network!", Toast.LENGTH_LONG).show();
+                        "The database currently not available or you are not connected to the wifi!", Toast.LENGTH_LONG).show();
                 return;
             }
             else {
-                Toast.makeText(LogIn.this, "Successful login !", Toast.LENGTH_SHORT).show();
+                switch (requestType) {
+                    case "GET":
+                        break;
+                    case "POST":
+                        TokenHelper token =converter.fromJson(response.getContent(), TokenHelper.class);
+                        SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("token" , token.getToken());
+                        editor.commit();
+                        Intent intent = new Intent(LogIn.this, BottomNav.class);
+                        startActivity(intent);
+                        finish();
+                        Toast.makeText(LogIn.this, "Successful login !", Toast.LENGTH_SHORT).show();
+                        break;
+                    case "PUT":
+                        break;
+                    case "DELETE":
+                        break;
+                }
             }
-            switch (requestType) {
-                case "GET":
-                    break;
-                case "POST":
-                    TokenHelper token =converter.fromJson(response.getContent(), TokenHelper.class);
-                    SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("token" , token.getToken());
-                    editor.commit();
-                    Intent intent = new Intent(LogIn.this, BottomNav.class);
-                    startActivity(intent);
-                    finish();
-                    break;
-                case "PUT":
-                    break;
-                case "DELETE":
-                    break;
-            }
+
         }
     }
 }

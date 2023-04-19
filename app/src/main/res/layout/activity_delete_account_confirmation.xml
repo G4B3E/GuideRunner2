@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DeleteAccountConfirmation"
-    android:background="#bb3f02"
+    android:background="#01121a"
     android:gravity="center">
 
 
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Are you sure you want to delete your account?"
-            android:textColor="#01121a"
+            android:textColor="#FFFFFF"
             android:textSize="30sp"
             android:gravity="center"
             android:layout_marginBottom="50sp"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
                 android:text="Yes"
-                android:backgroundTint="#01121a"
+                android:backgroundTint="#000"
                 android:textColor="@color/white"
                 android:id="@+id/DeleteAccount"
                 app:cornerRadius="100dp"

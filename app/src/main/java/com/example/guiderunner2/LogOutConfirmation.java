@@ -102,8 +102,12 @@ public class LogOutConfirmation extends AppCompatActivity {
                 Toast.makeText(LogOutConfirmation.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(LogOutConfirmation.this,
-                        "You are not logged in or not connected to the server!", Toast.LENGTH_LONG).show();
+                        "Please login or restart the app!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(LogOutConfirmation.this, BottomNav.class);
+                startActivity(intent);
+                finish();
                 return;
+
             }
             else {
                 Toast.makeText(LogOutConfirmation.this, "Checkout successful!", Toast.LENGTH_SHORT).show();

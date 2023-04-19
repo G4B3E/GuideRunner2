@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".OpenScreenMenu"
     android:orientation="vertical"
-    android:background="#65818C">
+    android:background="#01121a">
 
     <LinearLayout
         android:layout_width="match_parent"

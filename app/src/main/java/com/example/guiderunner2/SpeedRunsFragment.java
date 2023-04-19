@@ -124,19 +124,22 @@ public class SpeedRunsFragment extends Fragment {
             Gson converter = new Gson();
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(getActivity(),
-                        "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
+                        "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
             }
-            switch (requestType) {
-                case "GET":
-                    SpeedRunsListHelper speedrunArray = converter.fromJson(
-                            response.getContent(), SpeedRunsListHelper.class);
-                    speedrunslist.clear();
-                    speedrunslist.addAll(speedrunArray.getSpeedruns());
-                    list_view_library.setAdapter(new SpeedRunsAdapter());
+            else{
+                switch (requestType) {
+                    case "GET":
+                        SpeedRunsListHelper speedrunArray = converter.fromJson(
+                                response.getContent(), SpeedRunsListHelper.class);
+                        speedrunslist.clear();
+                        speedrunslist.addAll(speedrunArray.getSpeedruns());
+                        list_view_library.setAdapter(new SpeedRunsAdapter());
 
 
-                    break;
+                        break;
+                }
             }
+
         }
     }
 }
