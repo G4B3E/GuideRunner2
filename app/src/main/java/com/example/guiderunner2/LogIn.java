@@ -164,8 +164,6 @@ public class LogIn extends AppCompatActivity {
                     editor.commit();
                     Intent intent = new Intent(LogIn.this, BottomNav.class);
                     startActivity(intent);
-                    Toast.makeText(LogIn.this,
-                            "Kérem csatlakozzon az internetkez!", Toast.LENGTH_SHORT).show();
                     finish();
                     break;
                 case "PUT":

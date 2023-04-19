@@ -100,9 +100,9 @@ public class LogOutConfirmation extends AppCompatActivity {
             super.onPostExecute(response);
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(LogOutConfirmation.this,
-                        "You are not logged in!", Toast.LENGTH_SHORT).show();
+                        "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(LogOutConfirmation.this,
-                        "You are not logged in!", Toast.LENGTH_LONG).show();
+                        "You are not logged in or not connected to the server!", Toast.LENGTH_LONG).show();
                 return;
             }
             else {

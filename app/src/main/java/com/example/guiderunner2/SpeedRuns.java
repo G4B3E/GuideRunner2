@@ -79,9 +79,9 @@ public class SpeedRuns {
 
 }
 class SpeedRunsListHelper {
-    private List<SpeedRuns> records;
+    private List<SpeedRuns> speedruns;
 
-    public List<SpeedRuns> getRecords() {
-        return records;
+    public List<SpeedRuns> getSpeedruns() {
+        return speedruns;
     }
 }
