@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".games.Kotor"
+    tools:context=".Residentevil2re"
     android:background="#01121a"
     android:orientation="vertical">
 
@@ -29,7 +29,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/kotor"/>
+                android:src="@drawable/residentevil2re"/>
 
         </LinearLayout>
 
@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Star Wars Knights Of The Old Republic"
+                android:text="Resident Evil 2 Remake"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/monoregular" />
@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2003"
+                android:text="2019"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/monoregular" />
@@ -92,7 +92,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RolaPlaying"
+                android:text="Survior Horror"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/monoregular" />
@@ -112,7 +112,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Windows, Xbox, MacOS X,iOS, Android, Linux, PlayStation 5, Nintendo Switch"
+                android:text="Windows, Xbox Series X/S , Xbox One ,PlayStation 4,PlayStation 5"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/monoregular" />
@@ -133,7 +133,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Obsidian Entertainment"
+                android:text="CAPCOM"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/monoregular" />
@@ -169,7 +169,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Four thousand years prior to the Star Wars films,[note 1] Darth Malak – Darth Revan's apprentice – has unleashed a Sith armada against the Republic. Many Jedi, scattered and left vulnerable by Malak's aggression, die in battle while others swear loyalty and allegiance to Malak. The game opens with the player's character awakening aboard a doomed Republic capital ship with no recollection of their past."
+            android:text="A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh eating zombies roam the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable horrors await you. Witness the return of Resident Evil 2. "
             android:textSize="15sp"
             android:textColor="@color/white"
             android:fontFamily="@font/monoregular"

@@ -15,7 +15,25 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Kotor"
+            android:name=".games.HollowKnight"
+            android:exported="false" />
+        <activity
+            android:name=".games.JumpKing"
+            android:exported="false" />
+        <activity
+            android:name=".games.CupHead"
+            android:exported="false" />
+        <activity
+            android:name=".games.Minecraft"
+            android:exported="false" />
+        <activity
+            android:name=".games.HalfLife"
+            android:exported="false" />
+        <activity
+            android:name=".games.KotorII"
+            android:exported="false" />
+        <activity
+            android:name=".games.Kotor"
             android:exported="false" />
         <activity
             android:name=".games.Undertale"

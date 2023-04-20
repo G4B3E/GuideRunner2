@@ -128,6 +128,7 @@ public class NewsFragment extends Fragment {
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(getActivity(),
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
+                return;
             }
             else {
                 switch (requestType) {
@@ -137,8 +138,6 @@ public class NewsFragment extends Fragment {
                         newslist.clear();
                         newslist.addAll(peopleArray.getNews());
                         list_view_news.setAdapter(new NewsAdapter());
-
-
                         break;
                 }
             }

@@ -55,6 +55,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/Kotor"
                 android:src="@drawable/kotor"/>
         </LinearLayout>
 
@@ -66,6 +67,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/KotorII"
                 android:src="@drawable/kotorii"/>
         </LinearLayout>
 
@@ -94,6 +96,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/ResidentEvilIIre"
                 android:src="@drawable/residentevil2re"/>
         </LinearLayout>
 
@@ -105,6 +108,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/HalfLife"
                 android:src="@drawable/halflife"/>
         </LinearLayout>
 
@@ -116,6 +120,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/Minecraft"
                 android:src="@drawable/minecraft"/>
         </LinearLayout>
 
@@ -130,6 +135,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/Cuphead"
                 android:src="@drawable/cuphead"/>
         </LinearLayout>
 
@@ -141,6 +147,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/JumpKing"
                 android:src="@drawable/jumpking"/>
         </LinearLayout>
 
@@ -152,6 +159,7 @@
             <ImageView
                 android:layout_width="150sp"
                 android:layout_height="150sp"
+                android:id="@+id/HollowKnight"
                 android:src="@drawable/hollowknight"/>
         </LinearLayout>
 

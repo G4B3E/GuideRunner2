@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".games.Kotor"
+    tools:context=".games.KotorII"
     android:background="#01121a"
     android:orientation="vertical">
 
@@ -29,7 +29,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/kotor"/>
+                android:src="@drawable/kotorii"/>
 
         </LinearLayout>
 
@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Star Wars Knights Of The Old Republic"
+                android:text="Star Wars Knights Of The Old Republic II"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/monoregular" />
@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2003"
+                android:text="2004"
                 android:textSize="15sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/monoregular" />

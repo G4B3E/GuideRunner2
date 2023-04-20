@@ -110,7 +110,6 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
                 return;
             }
             else {
-                Toast.makeText(DeleteAccountConfirmation.this, "Delete successful!", Toast.LENGTH_SHORT).show();
             }
             switch (requestType) {
                 case "GET":
@@ -127,8 +126,12 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
                     Intent intent = new Intent(DeleteAccountConfirmation.this, OpenScreenMenu.class);
                     startActivity(intent);
                     finish();
+                    Toast.makeText(DeleteAccountConfirmation.this, "Delete successful!", Toast.LENGTH_SHORT).show();
                     break;
             }
+
+
+
         }
     }
 }
