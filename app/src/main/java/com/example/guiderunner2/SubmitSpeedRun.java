@@ -2,7 +2,9 @@ package com.example.guiderunner2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -14,11 +16,21 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 public class SubmitSpeedRun extends AppCompatActivity {
 
@@ -173,35 +185,69 @@ public class SubmitSpeedRun extends AppCompatActivity {
             super.onPreExecute();
 
         }
+        protected void Contain(){
+            SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
+            sharedPreferences.contains("token");
+
+        }
+        public boolean isTokenInXmlFile(String token, File Important) {
+            try {
+                // Read the contents of the XML file into a string
+                String xmlString = new String(Files.readAllBytes(Important.toPath()));
+
+                // Create a regular expression to match the token in the XML file
+                String regex = "(?s).*\\b" + Pattern.quote(token) + "\\b.*";
+
+                // Use the regular expression to search for the token in the XML string
+                return xmlString.matches(regex);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // If there was an error reading the file or the token was not found, return false
+            return false;
+        }
+
+
+
 
         @Override
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
+            File xmlFile = new File("/data/data/com.example.guiderunner2/shared_prefs/Important.xml");
+            boolean containsToken = isTokenInXmlFile("token", xmlFile);
 
-            if (response.getResponseCode() >= 402) {
+            if (response.getResponseCode() >= 400) {
                 Toast.makeText(SubmitSpeedRun.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(SubmitSpeedRun.this,
                         ""+response.getContent(), Toast.LENGTH_LONG).show();
                 return;
             }
-            else {
+            if (containsToken){
                 switch (requestType) {
                     case "GET":
                         break;
                     case "POST":
+                        Toast.makeText(SubmitSpeedRun.this, "Succesfull upload", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(SubmitSpeedRun.this, BottomNav.class);
                         startActivity(intent);
                         finish();
-                        overridePendingTransition(R.anim.slide_in_left,
-                                R.anim.slide_out_right);
-                        Toast.makeText(SubmitSpeedRun.this, "Successful upload!", Toast.LENGTH_SHORT).show();
+                        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                         break;
                     case "PUT":
                         break;
                     case "DELETE":
                         break;
                 }
+                return;
+            }
+            else {
+                Toast.makeText(SubmitSpeedRun.this, "Please create an account or login", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SubmitSpeedRun.this, OpenScreenMenu.class);
+                startActivity(intent);
+                finish();
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 
             }
 

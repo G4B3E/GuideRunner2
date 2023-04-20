@@ -155,13 +155,19 @@ public class SignUp extends AppCompatActivity {
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
 
-            if (response.getResponseCode() >= 400) {
+            if (response.getResponseCode() != 409) {
                 Toast.makeText(SignUp.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(SignUp.this,
                         "The database currently not available or you are not connected to the wifi!", Toast.LENGTH_LONG).show();
                 return;
-            } else {
+            }
+            if (response.getResponseCode() == 409){
+                Toast.makeText(SignUp.this,
+                        "The username or email is already taken!", Toast.LENGTH_LONG).show();
+                return;
+            }
+             else {
                 switch (requestType) {
                     case "GET":
                         break;
