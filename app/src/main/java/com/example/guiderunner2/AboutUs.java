@@ -1,13 +1,13 @@
 package com.example.guiderunner2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutUs extends AppCompatActivity {
     private ImageButton Instagram;
@@ -23,7 +23,7 @@ public class AboutUs extends AppCompatActivity {
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AboutUs.this,BottomNav.class);
+                Intent intent = new Intent(AboutUs.this, BottomNav.class);
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.slide_in_left,
@@ -61,7 +61,8 @@ public class AboutUs extends AppCompatActivity {
             }
         });
     }
-    private void init(){
+
+    private void init() {
         Back = findViewById(R.id.Back);
         Instagram = findViewById(R.id.Instagram);
         Twitter = findViewById(R.id.Twitter);

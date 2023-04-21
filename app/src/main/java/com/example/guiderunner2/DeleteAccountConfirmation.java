@@ -1,7 +1,5 @@
 package com.example.guiderunner2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
@@ -27,7 +27,7 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
         BackToProfile2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DeleteAccountConfirmation.this,BottomNav.class);
+                Intent intent = new Intent(DeleteAccountConfirmation.this, BottomNav.class);
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.slide_in_left,
@@ -45,10 +45,11 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
 
     }
 
-    public void init(){
+    public void init() {
         BackToProfile2 = findViewById(R.id.BackToProfile2);
         DeleteAccount = findViewById(R.id.DeleteAccount);
     }
+
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
         String requestType;
@@ -73,19 +74,20 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
             try {
                 switch (requestType) {
                     case "GET":
-                        response = RequestHandler.get(requestUrl,null);
+                        response = RequestHandler.get(requestUrl, null);
                         break;
                     case "POST":
-                        response = RequestHandler.post(requestUrl, requestParams,null);
+                        response = RequestHandler.post(requestUrl, requestParams, null);
                         break;
                     case "PUT":
-                        response = RequestHandler.put(requestUrl, requestParams,null);
+                        response = RequestHandler.put(requestUrl, requestParams, null);
                         break;
                     case "DELETE":
-                        response = RequestHandler.delete(requestUrl,sharedPreferences.getString("token",null));
+                        response = RequestHandler.delete(requestUrl, sharedPreferences.getString("token", null));
                         break;
                 }
-            } catch (IOException e) {}
+            } catch (IOException e) {
+            }
             return response;
         }
 
@@ -108,8 +110,7 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
                 startActivity(intent);
                 finish();
                 return;
-            }
-            else {
+            } else {
             }
             switch (requestType) {
                 case "GET":
@@ -129,7 +130,6 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
                     Toast.makeText(DeleteAccountConfirmation.this, "Delete successful!", Toast.LENGTH_SHORT).show();
                     break;
             }
-
 
 
         }

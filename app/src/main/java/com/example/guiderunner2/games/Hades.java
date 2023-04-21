@@ -1,8 +1,8 @@
 package com.example.guiderunner2.games;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.guiderunner2.R;
 

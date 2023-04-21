@@ -7,14 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
 import java.util.HashMap;
 import java.util.List;
 
 public class CustomizedExpandableListAdapter extends BaseExpandableListAdapter {
 
-    private Context context;
-    private List<String> expandableTitleList;
-    private HashMap<String, List<String>> expandableDetailList;
+    private final Context context;
+    private final List<String> expandableTitleList;
+    private final HashMap<String, List<String>> expandableDetailList;
 
     public CustomizedExpandableListAdapter(Context context, List<String> expandableListTitle,
                                            HashMap<String, List<String>> expandableListDetail) {

@@ -1,7 +1,5 @@
 package com.example.guiderunner2;
 
-import java.util.List;
-
 public class Records {
 
     private String username;

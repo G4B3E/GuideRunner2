@@ -2,11 +2,7 @@ package com.example.guiderunner2;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.google.gson.Gson;
 
@@ -24,7 +24,7 @@ import java.util.List;
 public class SpeedRunsFragment extends Fragment {
 
     private ListView list_view_library;
-    private List<SpeedRuns> speedrunslist = new ArrayList<>();
+    private final List<SpeedRuns> speedrunslist = new ArrayList<>();
 
     public String URL = "http://10.0.2.2:3000/records";
 
@@ -37,6 +37,7 @@ public class SpeedRunsFragment extends Fragment {
         task.execute();
         return view;
     }
+
     public void init(View view) {
         list_view_library = view.findViewById(R.id.list_view_library);
     }
@@ -44,7 +45,7 @@ public class SpeedRunsFragment extends Fragment {
     private class SpeedRunsAdapter extends ArrayAdapter<SpeedRuns> {
 
         public SpeedRunsAdapter() {
-            super(getActivity(),  R.layout.records_adapter, speedrunslist);
+            super(getActivity(), R.layout.records_adapter, speedrunslist);
         }
 
         @NonNull
@@ -72,6 +73,7 @@ public class SpeedRunsFragment extends Fragment {
             return view;
         }
     }
+
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
         String requestType;
@@ -95,16 +97,16 @@ public class SpeedRunsFragment extends Fragment {
             try {
                 switch (requestType) {
                     case "GET":
-                        response = RequestHandler.get(requestUrl,null);
+                        response = RequestHandler.get(requestUrl, null);
                         break;
                     case "POST":
-                        response = RequestHandler.post(requestUrl, requestParams,null);
+                        response = RequestHandler.post(requestUrl, requestParams, null);
                         break;
                     case "PUT":
-                        response = RequestHandler.put(requestUrl, requestParams,null);
+                        response = RequestHandler.put(requestUrl, requestParams, null);
                         break;
                     case "DELETE":
-                        response = RequestHandler.delete(requestUrl + "/" + requestParams,null);
+                        response = RequestHandler.delete(requestUrl + "/" + requestParams, null);
                         break;
                 }
             } catch (IOException e) {
@@ -126,17 +128,15 @@ public class SpeedRunsFragment extends Fragment {
                 Toast.makeText(getActivity(),
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 return;
-            }
-            else{
+            } else {
                 switch (requestType) {
                     case "GET":
                         SpeedRunsListHelper speedrunArray = converter.fromJson(
                                 response.getContent(), SpeedRunsListHelper.class);
                         speedrunslist.clear();
                         speedrunslist.addAll(speedrunArray.getSpeedruns());
+                        Log.e("valami", "" + speedrunslist.size());
                         list_view_library.setAdapter(new SpeedRunsAdapter());
-
-
                         break;
                 }
             }

@@ -1,11 +1,11 @@
 package com.example.guiderunner2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class OpenScreenMenu extends AppCompatActivity {
@@ -23,7 +23,7 @@ public class OpenScreenMenu extends AppCompatActivity {
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpenScreenMenu.this,SignUp.class);
+                Intent intent = new Intent(OpenScreenMenu.this, SignUp.class);
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.slide_in_left,
@@ -33,7 +33,7 @@ public class OpenScreenMenu extends AppCompatActivity {
         LogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpenScreenMenu.this,LogIn.class);
+                Intent intent = new Intent(OpenScreenMenu.this, LogIn.class);
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.slide_in_right,
@@ -43,7 +43,7 @@ public class OpenScreenMenu extends AppCompatActivity {
         Skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OpenScreenMenu.this,BottomNav.class);
+                Intent intent = new Intent(OpenScreenMenu.this, BottomNav.class);
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.fade_in,
@@ -51,7 +51,8 @@ public class OpenScreenMenu extends AppCompatActivity {
             }
         });
     }
-    private void init(){
+
+    private void init() {
         SignUp = findViewById(R.id.SignUp);
         LogIn = findViewById(R.id.LogIn);
         Skip = findViewById(R.id.Skip);

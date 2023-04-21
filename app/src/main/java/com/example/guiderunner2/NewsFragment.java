@@ -1,15 +1,7 @@
 package com.example.guiderunner2;
 
-import static android.content.ContentValues.TAG;
-
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,20 +10,24 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class NewsFragment extends Fragment {
     private ListView list_view_news;
-    private List<News> newslist = new ArrayList<>();
+    private final List<News> newslist = new ArrayList<>();
 
     public String URL = "http://10.0.2.2:3000/news";
 
+    SwipeRefreshLayout mSwipeRefreshLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,15 +37,17 @@ public class NewsFragment extends Fragment {
         RequestTask task = new RequestTask(URL, "GET");
         task.execute();
         return view;
+
     }
 
     public void init(View view) {
         list_view_news = view.findViewById(R.id.list_view_news);
     }
+
     private class NewsAdapter extends ArrayAdapter<News> {
 
         public NewsAdapter() {
-            super(getActivity(),  R.layout.news_adapter, newslist);
+            super(getActivity(), R.layout.news_adapter, newslist);
         }
 
         @NonNull
@@ -74,7 +72,9 @@ public class NewsFragment extends Fragment {
 
             return view;
         }
+
     }
+
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
         String requestType;
@@ -98,16 +98,16 @@ public class NewsFragment extends Fragment {
             try {
                 switch (requestType) {
                     case "GET":
-                        response = RequestHandler.get(requestUrl,null);
+                        response = RequestHandler.get(requestUrl, null);
                         break;
                     case "POST":
-                        response = RequestHandler.post(requestUrl, requestParams,null);
+                        response = RequestHandler.post(requestUrl, requestParams, null);
                         break;
                     case "PUT":
-                        response = RequestHandler.put(requestUrl, requestParams,null);
+                        response = RequestHandler.put(requestUrl, requestParams, null);
                         break;
                     case "DELETE":
-                        response = RequestHandler.delete(requestUrl + "/" + requestParams,null);
+                        response = RequestHandler.delete(requestUrl + "/" + requestParams, null);
                         break;
                 }
             } catch (IOException e) {
@@ -129,8 +129,7 @@ public class NewsFragment extends Fragment {
                 Toast.makeText(getActivity(),
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 return;
-            }
-            else {
+            } else {
                 switch (requestType) {
                     case "GET":
                         NewsListHelper peopleArray = converter.fromJson(

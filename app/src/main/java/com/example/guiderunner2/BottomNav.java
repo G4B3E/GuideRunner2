@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-
 import com.example.guiderunner2.databinding.ActivityBottomNavBinding;
 
 public class BottomNav extends AppCompatActivity {
@@ -25,7 +24,7 @@ public class BottomNav extends AppCompatActivity {
         replaceFragment(new NewsFragment());
 
         binding.BottomNavigationView.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()){
+            switch (item.getItemId()) {
 
 
                 case R.id.News:
@@ -48,10 +47,10 @@ public class BottomNav extends AppCompatActivity {
         });
     }
 
-    private void replaceFragment(Fragment fragment){
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.Frame_Layout,fragment);
+        fragmentTransaction.replace(R.id.Frame_Layout, fragment);
         fragmentTransaction.commit();
     }
 }

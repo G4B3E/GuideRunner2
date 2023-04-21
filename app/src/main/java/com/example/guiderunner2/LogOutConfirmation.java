@@ -1,7 +1,5 @@
 package com.example.guiderunner2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
@@ -44,10 +42,12 @@ public class LogOutConfirmation extends AppCompatActivity {
         });
 
     }
-    private  void init(){
+
+    private void init() {
         LogOut = findViewById(R.id.LogOut);
         BackToProfile = findViewById(R.id.BackToProfile);
     }
+
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
         String requestType;
@@ -70,21 +70,22 @@ public class LogOutConfirmation extends AppCompatActivity {
             Response response = null;
             SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
             try {
-                    switch (requestType) {
-                        case "GET":
-                            response = RequestHandler.get(requestUrl,null);
-                            break;
-                        case "POST":
-                            response = RequestHandler.post(requestUrl, requestParams,null);
-                            break;
-                        case "PUT":
-                            response = RequestHandler.put(requestUrl, requestParams,null);
-                            break;
-                        case "DELETE":
-                            response = RequestHandler.delete(requestUrl,sharedPreferences.getString("token",null));
-                            break;
-                    }
-            } catch (IOException e) {}
+                switch (requestType) {
+                    case "GET":
+                        response = RequestHandler.get(requestUrl, null);
+                        break;
+                    case "POST":
+                        response = RequestHandler.post(requestUrl, requestParams, null);
+                        break;
+                    case "PUT":
+                        response = RequestHandler.put(requestUrl, requestParams, null);
+                        break;
+                    case "DELETE":
+                        response = RequestHandler.delete(requestUrl, sharedPreferences.getString("token", null));
+                        break;
+                }
+            } catch (IOException e) {
+            }
             return response;
         }
 
@@ -108,8 +109,7 @@ public class LogOutConfirmation extends AppCompatActivity {
                 finish();
                 return;
 
-            }
-            else {
+            } else {
                 Toast.makeText(LogOutConfirmation.this, "Checkout successful!", Toast.LENGTH_SHORT).show();
             }
             switch (requestType) {

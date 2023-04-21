@@ -1,7 +1,5 @@
 package com.example.guiderunner2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,9 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import java.io.IOException;
+import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+
+import java.io.IOException;
 
 
 public class LogIn extends AppCompatActivity {
@@ -47,9 +47,9 @@ public class LogIn extends AppCompatActivity {
                     String email = EmailEditText.getText().toString();
                     String password = PasswordEditText.getText().toString();
 
-                    LoginHelper users = new LoginHelper(email,password);
+                    LoginHelper users = new LoginHelper(email, password);
                     Gson json = new Gson();
-                    LogIn.RequestTask task = new LogIn.RequestTask(URL,"POST",json.toJson(users));
+                    LogIn.RequestTask task = new LogIn.RequestTask(URL, "POST", json.toJson(users));
                     task.execute();
                 }
 
@@ -67,12 +67,13 @@ public class LogIn extends AppCompatActivity {
         });
     }
 
-    private  void init(){
+    private void init() {
         LogIn = findViewById(R.id.LogIn);
         EmailEditText = findViewById(R.id.EmailEditText);
         PasswordEditText = findViewById(R.id.PasswordEditText);
         Back = findViewById(R.id.Back);
     }
+
     private boolean CheckAllFields() {
         if (EmailEditText.length() == 0) {
             EmailEditText.setError("Email is required");
@@ -90,6 +91,7 @@ public class LogIn extends AppCompatActivity {
         }
         return true;
     }
+
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
         String requestType;
@@ -113,16 +115,16 @@ public class LogIn extends AppCompatActivity {
             try {
                 switch (requestType) {
                     case "GET":
-                        response = RequestHandler.get(requestUrl,null);
+                        response = RequestHandler.get(requestUrl, null);
                         break;
                     case "POST":
-                        response = RequestHandler.post(requestUrl, requestParams,null);
+                        response = RequestHandler.post(requestUrl, requestParams, null);
                         break;
                     case "PUT":
-                        response = RequestHandler.put(requestUrl, requestParams,null);
+                        response = RequestHandler.put(requestUrl, requestParams, null);
                         break;
                     case "DELETE":
-                        response = RequestHandler.delete(requestUrl + "/" + requestParams,null);
+                        response = RequestHandler.delete(requestUrl + "/" + requestParams, null);
                         break;
                 }
             } catch (IOException e) {
@@ -149,16 +151,15 @@ public class LogIn extends AppCompatActivity {
                 Toast.makeText(LogIn.this,
                         "The database currently not available or you are not connected to the wifi!", Toast.LENGTH_LONG).show();
                 return;
-            }
-            else {
+            } else {
                 switch (requestType) {
                     case "GET":
                         break;
                     case "POST":
-                        TokenHelper token =converter.fromJson(response.getContent(), TokenHelper.class);
+                        TokenHelper token = converter.fromJson(response.getContent(), TokenHelper.class);
                         SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString("token" , token.getToken());
+                        editor.putString("token", token.getToken());
                         editor.commit();
                         Intent intent = new Intent(LogIn.this, BottomNav.class);
                         startActivity(intent);

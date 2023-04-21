@@ -24,13 +24,11 @@ public class ExpandableListDataItems {
         Link.add("To the 'Link' column, Paste the Youtube link of your Speedrun.\nExample: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' ");
 
 
-
         expandableDetailList.put("Game", Game);
         expandableDetailList.put("Platform", Platform);
         expandableDetailList.put("Time", Time);
         expandableDetailList.put("Difficulty/Condition", Difficulty_Condition);
         expandableDetailList.put("Link", Link);
-
 
 
         return expandableDetailList;

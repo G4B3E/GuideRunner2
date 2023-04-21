@@ -1,7 +1,5 @@
 package com.example.guiderunner2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 
@@ -66,7 +66,8 @@ public class SignUp extends AppCompatActivity {
 
 
     }
-    private  void init(){
+
+    private void init() {
         Back = findViewById(R.id.Back);
         SignUp = findViewById(R.id.SignUp);
         UsernameEditText = findViewById(R.id.UsernameEditText);
@@ -74,16 +75,15 @@ public class SignUp extends AppCompatActivity {
         PasswordEditText = findViewById(R.id.PasswordEditText);
 
     }
+
     private boolean CheckAllFields() {
         if (UsernameEditText.length() == 0) {
             UsernameEditText.setError("Username is required");
             return false;
-        }
-        else if (UsernameEditText.length() < 5) {
+        } else if (UsernameEditText.length() < 5) {
             UsernameEditText.setError("Username cannot be less than 6 characters");
             return false;
-        }
-        else if (UsernameEditText.length() > 20) {
+        } else if (UsernameEditText.length() > 20) {
             UsernameEditText.setError("Username cannot be more than 20 characters");
             return false;
         }
@@ -103,6 +103,7 @@ public class SignUp extends AppCompatActivity {
         }
         return true;
     }
+
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
         String requestType;
@@ -126,16 +127,16 @@ public class SignUp extends AppCompatActivity {
             try {
                 switch (requestType) {
                     case "GET":
-                        response = RequestHandler.get(requestUrl,null);
+                        response = RequestHandler.get(requestUrl, null);
                         break;
                     case "POST":
-                        response = RequestHandler.post(requestUrl, requestParams,null);
+                        response = RequestHandler.post(requestUrl, requestParams, null);
                         break;
                     case "PUT":
-                        response = RequestHandler.put(requestUrl, requestParams,null);
+                        response = RequestHandler.put(requestUrl, requestParams, null);
                         break;
                     case "DELETE":
-                        response = RequestHandler.delete(requestUrl + "/" + requestParams,null);
+                        response = RequestHandler.delete(requestUrl + "/" + requestParams, null);
                         break;
                 }
             } catch (IOException e) {
@@ -162,12 +163,11 @@ public class SignUp extends AppCompatActivity {
                         "The database currently not available or you are not connected to the wifi!", Toast.LENGTH_LONG).show();
                 return;
             }
-            if (response.getResponseCode() == 409){
+            if (response.getResponseCode() == 409) {
                 Toast.makeText(SignUp.this,
                         "The username or email is already taken!", Toast.LENGTH_LONG).show();
                 return;
-            }
-             else {
+            } else {
                 switch (requestType) {
                     case "GET":
                         break;

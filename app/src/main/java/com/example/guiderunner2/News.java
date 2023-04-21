@@ -1,6 +1,5 @@
 package com.example.guiderunner2;
 
-import java.util.Date;
 import java.util.List;
 
 public class News {
@@ -13,7 +12,7 @@ public class News {
     private String date;
 
 
-    public News(int id,String gamename, String title, String content, String source, String date) {
+    public News(int id, String gamename, String title, String content, String source, String date) {
         this.id = id;
         this.gamename = gamename;
         this.title = title;
@@ -72,6 +71,7 @@ public class News {
 
 
 }
+
 class NewsListHelper {
     private List<News> news;
 

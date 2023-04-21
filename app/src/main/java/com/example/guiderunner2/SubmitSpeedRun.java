@@ -1,12 +1,11 @@
 package com.example.guiderunner2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,23 +13,15 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
+import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 public class SubmitSpeedRun extends AppCompatActivity {
 
@@ -66,7 +57,7 @@ public class SubmitSpeedRun extends AppCompatActivity {
         Cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SubmitSpeedRun.this,BottomNav.class);
+                Intent intent = new Intent(SubmitSpeedRun.this, BottomNav.class);
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.slide_in_left,
@@ -85,7 +76,7 @@ public class SubmitSpeedRun extends AppCompatActivity {
                     String difficulty = EditTextDifficulty.getText().toString();
                     String youtubelink = EditTextLink.getText().toString();
 
-                    Records records = new Records(username, gamename, time,platform,difficulty,youtubelink);
+                    Records records = new Records(username, gamename, time, platform, difficulty, youtubelink);
                     Gson json = new Gson();
                     RequestTask task = new RequestTask(URL, "POST", json.toJson(records));
                     task.execute();
@@ -97,8 +88,7 @@ public class SubmitSpeedRun extends AppCompatActivity {
     }
 
 
-
-    private void init(){
+    private void init() {
         EditTextUserName = findViewById(R.id.EditTextUserName);
         EditTextGame = findViewById(R.id.EditTextGame);
         EditTextTime = findViewById(R.id.EditTextTime);
@@ -110,6 +100,7 @@ public class SubmitSpeedRun extends AppCompatActivity {
 
 
     }
+
     private boolean CheckAllFields() {
         if (EditTextUserName.length() == 0) {
             EditTextUserName.setError("Username is required");
@@ -138,6 +129,7 @@ public class SubmitSpeedRun extends AppCompatActivity {
 
         return true;
     }
+
     private class RequestTask extends AsyncTask<Void, Void, Response> {
         String requestUrl;
         String requestType;
@@ -161,16 +153,16 @@ public class SubmitSpeedRun extends AppCompatActivity {
             try {
                 switch (requestType) {
                     case "GET":
-                        response = RequestHandler.get(requestUrl,null);
+                        response = RequestHandler.get(requestUrl, null);
                         break;
                     case "POST":
-                        response = RequestHandler.post(requestUrl, requestParams,null);
+                        response = RequestHandler.post(requestUrl, requestParams, null);
                         break;
                     case "PUT":
-                        response = RequestHandler.put(requestUrl, requestParams,null);
+                        response = RequestHandler.put(requestUrl, requestParams, null);
                         break;
                     case "DELETE":
-                        response = RequestHandler.delete(requestUrl + "/" + requestParams,null);
+                        response = RequestHandler.delete(requestUrl + "/" + requestParams, null);
                         break;
                 }
             } catch (IOException e) {
@@ -185,46 +177,34 @@ public class SubmitSpeedRun extends AppCompatActivity {
             super.onPreExecute();
 
         }
-        protected void Contain(){
+
+        protected void Contain() {
             SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
             sharedPreferences.contains("token");
 
         }
-        public boolean isTokenInXmlFile(String token, File Important) {
-            try {
-                // Read the contents of the XML file into a string
-                String xmlString = new String(Files.readAllBytes(Important.toPath()));
 
-                // Create a regular expression to match the token in the XML file
-                String regex = "(?s).*\\b" + Pattern.quote(token) + "\\b.*";
+        public boolean isTokenInXmlFile() {
+            SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
+            String token = sharedPreferences.getString("token", null);
 
-                // Use the regular expression to search for the token in the XML string
-                return xmlString.matches(regex);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            // If there was an error reading the file or the token was not found, return false
-            return false;
+            return token != null;
         }
-
-
 
 
         @Override
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
-            File xmlFile = new File("/data/data/com.example.guiderunner2/shared_prefs/Important.xml");
-            boolean containsToken = isTokenInXmlFile("token", xmlFile);
-
+            boolean containsToken = isTokenInXmlFile();
+            Log.e("valami ",containsToken+"");
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(SubmitSpeedRun.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(SubmitSpeedRun.this,
-                        ""+response.getContent(), Toast.LENGTH_LONG).show();
+                        "" + response.getContent(), Toast.LENGTH_LONG).show();
                 return;
             }
-            if (containsToken){
+            if (containsToken) {
                 switch (requestType) {
                     case "GET":
                         break;
@@ -240,9 +220,8 @@ public class SubmitSpeedRun extends AppCompatActivity {
                     case "DELETE":
                         break;
                 }
-                return;
-            }
-            else {
+
+            } else {
                 Toast.makeText(SubmitSpeedRun.this, "Please create an account or login", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SubmitSpeedRun.this, OpenScreenMenu.class);
                 startActivity(intent);

@@ -78,6 +78,7 @@ public class SpeedRuns {
     }
 
 }
+
 class SpeedRunsListHelper {
     private List<SpeedRuns> speedruns;
 
