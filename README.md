@@ -74,14 +74,63 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
   
 ## Activity-k/Osztályok/Fragmentek leírása:
 
+### Activity-k:
 
-| Fájlok | Típus | Leírás |
-| ------------- | ------------- | ------------- |
-| SplashScreen  | A mező nem maradhat üresen |  ------------- |
-| IsString  | A mezőnek stringnek kell lennie("") | ------------- |
-| IsUrl  | A mezőnek url-nek kell lennie | ------------- |
-| MinLength  | A mező minimum karaktertartalma  | ------------- |
-| MaxLength  | A mező maximum karaktertartalma  | ------------- |
+| Fájlok | Leírás |
+| ------------- | ------------- |
+| SplashScreen  | Töltőképernyő | 
+| OpenScreenMenu  | A bejelentkezés, regisztráció vgay pedig a főldalra irányít el | 
+| SignUp  | A mezőnek url-nek kell lennie | 
+| LogIn  | A mező nem maradhat üresen | 
+| BottomNav  | A mezőnek stringnek kell lennie("") | 
+| SubmitSpeedRun  | A mezőnek url-nek kell lennie | 
+| MyProfileData  | A mező nem maradhat üresen | 
+| AboutUs  | A mezőnek stringnek kell lennie("") | 
+| DeleteAccountConfirmation  | A mezőnek url-nek kell lennie | 
+| LogOutConfirmation  | A mezőnek stringnek kell lennie("") | 
+| RefreshScreen  | A mezőnek url-nek kell lennie | 
+| MyProfileData  | A mező nem maradhat üresen | 
+| CupHead  | A mezőnek stringnek kell lennie("") | 
+| Hades  | A mezőnek url-nek kell lennie | 
+| HalfLife  | A mezőnek url-nek kell lennie | 
+| HollowKnight  | A mező nem maradhat üresen | 
+| JumpKing  | A mezőnek stringnek kell lennie("") | 
+| Kotor  | A mezőnek url-nek kell lennie | 
+| KotorII  | A mezőnek url-nek kell lennie | 
+| LegendOfZeldBOTW  | A mezőnek url-nek kell lennie | 
+| Minecraft  | A mező nem maradhat üresen | 
+| ResidentEvilIIRE  | A mezőnek stringnek kell lennie("") | 
+| Undertale  | A mezőnek url-nek kell lennie | 
+
+### Osztályok:
+
+| Fájlok | Leírás |
+| ------------- | ------------- |
+| LocalHelper  | A mező nem maradhat üresen | 
+| Loginhelper  | A mezőnek stringnek kell lennie("") | 
+| LogOutHelper  | A mezőnek url-nek kell lennie | 
+| News  | A mező nem maradhat üresen | 
+| NewsLisHelper  | A mezőnek stringnek kell lennie("") | 
+| Records  | A mezőnek url-nek kell lennie | 
+| RequestHandler  | A mező nem maradhat üresen | 
+| Response  | A mezőnek stringnek kell lennie("") | 
+| TokenHelper  | A mezőnek url-nek kell lennie | 
+| Users  | A mezőnek stringnek kell lennie("") | 
+
+### Fragmentek:
+
+| Fájlok | Leírás |
+| ------------- | ------------- |
+| NewsFragment  | A mező nem maradhat üresen | 
+| SpeedRunsFragment  | A mezőnek stringnek kell lennie("") | 
+| GameLibraryFragment  | A mezőnek url-nek kell lennie | 
+| ProfileFragment  | A mező nem maradhat üresen | 
+
+
+
+
+
+
 
   
   
