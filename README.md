@@ -3,6 +3,7 @@
 GuideRunner nevő projekt mobil alkalmazása.
 Készítette: Deli Gábor
 
+Backend:
 https://github.com/paltsm/guiderunner
 
 # Leírás:
@@ -44,48 +45,6 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
     ..
     ...
     
-## Activity-k és XML-ek:
-  * SplashScreen/activity_splash_screen
-  * OpenScreenMenu/activity_open_screen_menu
-  * SignUp/activity_sign_up
-  * LogIn/activity_log_in
-  * BottomNav(Az ehhez tartozó fragmentek)/activity_bottom_nav
-    * NewsFragment/fragment_news
-    * SpeedRunsFragment/fragment_speed_runs
-    * GameLibraryFragment/fragment_game_library
-    * ProfileFragment/fragment_profile
-  * SubmitSpeedRun/activity_submit_speed_run
-  * MyProfileData/activity_my_profile_data
-  * AboutUs/activity_about_us
-  * DeleteAccountConfirmation/activity_delete_account_confirmation
-  * LogOutConfirmation/activity_logout_confirmation
-  * RefreshScreen/activity_refresh_page
-  * A "GameLiberyFragement"- ben található jáékok activity-jei:
-      * CupHead/activity_cup_head
-      * Hades/activity_hades
-      * HalfLife/activity_half_life
-      * HollowKnight/activity_hollow_knight
-      * JumpKing/activity_jump_king
-      * Kotor/activity_kotor
-      * KotorII/activity_kotor_ii
-      * LegendOfZeldBOTW/activity_legends_of_zelda_botw
-      * Minecraft/activity_minecraft
-      * ResidentEvilIIRE/activity_residenteviliire
-      * Undertale/activity_undertale
-  
-  
-## Osztályok:
-  * LocalHelper
-  * Loginhelper
-  * LogOutHelper
-  * News
-  * NewsLisHelper
-  * Records
-  * RequestHandler
-  * Response 
-  * TokenHelper
-  * Users
-  
 ## Activity-k/Osztályok/Fragmentek leírása:
 
 ### Activity-k:
@@ -169,9 +128,12 @@ graph TD;
     GameLibraryFragment-->Undertale;
     
 ```
+# Alkalmazás felépítése felhasználok számára:
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
 
 
-
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
   
   
 
