@@ -130,11 +130,41 @@ graph TD;
 ```
 # Alkalmazás felépítése felhasználok számára:
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+## Töltő képernyő
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/loading_screen.png"  width="200" height="400" />
 
+## Nyitó képernyő
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/openscreen_menu.png"  width="200" height="400" />
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+## Regisztráció
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/signup.png"  width="200" height="400" />
+
+## Bejelentkezés
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/login.png"  width="200" height="400" />
+
+## news
+// not yet
+
+## speedruns
+// not yet
+
+## Játék könytár
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/gamelibrary.png"  width="200" height="400" />
+
+## Profil 
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/profile.png"  width="200" height="400" />
   
-  
+## Speedrun hozzáadása
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/addspeedrun.png"  width="200" height="400" />
 
+## Felhasználó adatok
+// not yet
 
+## About Us
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/addspeedrun.png"  width="200" height="400" />
+
+## Fiók törlése
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/delete_acc.png"  width="200" height="400" />
+
+## Kijelentkezés
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/logout_acc.png"  width="200" height="400" />
