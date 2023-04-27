@@ -16,17 +16,31 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
   * MinSdk: 26
   * TargetSdk: 33
   
-## Implementations:
+## Implementációk:
     ...
     ..
      'androidx.gridlayout:gridlayout:1.0.0'
+       // Az Android GridLayout az elemek és nézetek téglalap alakú rács formájában történő megjelenítésére szolgál.
+     
      'androidx.appcompat:appcompat:1.6.1'
+      // Android-támogatási könyvtár, amely lehetővé teszi az ActionBar és a Material Design specifikus megvalósítását, 
+      például az Eszköztár használatát a régebbi eszközökön egészen az Android v2-ig.
+     
      'com.google.android.material:material:1.8.0'
+      // Az Material Design átfogó útmutató a vizuális, mozgási és interakciós tervezéshez platformokon és eszközökön keresztül.
+     
      'androidx.constraintlayout:constraintlayout:2.1.4'
+      // A Layout Editor megszorítások segítségével határozza meg a felhasználói felület elemeinek helyzetét az elrendezésen belül.
+      
      'com.airbnb.android:lottie:4.1.0'
+      // Ez az implementáció az animációk használatát teszi lehetővé. 
+      
      'androidx.cardview:cardview:1.0.0'
-     'androidx.cardview:cardview:1.0.0'
+      // A CardView tárolókat gyakran listákban használják az egyes elemek információinak tárolására.
+     
      'com.google.code.gson:gson:2.10'
+      // A Gson egy Java-könyvtár, amely Java-objektumok JSON-reprezentációjukká alakítására használható. 
+      Használható egy JSON karakterlánc egyenértékű Java objektummá konvertálására is.
     ..
     ...
     
@@ -79,13 +93,13 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
 | Fájlok | Leírás |
 | ------------- | ------------- |
 | SplashScreen  | Töltőképernyő | 
-| OpenScreenMenu  | A bejelentkezés, regisztráció vgay pedig a főldalra irányít el | 
-| SignUp  | A mezőnek url-nek kell lennie | 
-| LogIn  | A mező nem maradhat üresen | 
-| BottomNav  | A mezőnek stringnek kell lennie("") | 
-| SubmitSpeedRun  | A mezőnek url-nek kell lennie | 
-| MyProfileData  | A mező nem maradhat üresen | 
-| AboutUs  | A mezőnek stringnek kell lennie("") | 
+| OpenScreenMenu  | A bejelentkezés, regisztráció vagy pedig a news oldalra irányít el. | 
+| SignUp  | Regisztrációs oldal. | 
+| LogIn  | Bejelentkezési  oldal. | 
+| BottomNav  | Az az activity amely több fragmentre van osztva, navigációs sávval. | 
+| SubmitSpeedRun  | Ez az activity teszi lehetővé a SpeedRunok hozzáadását. | 
+| MyProfileData  | A felhasználó regisztrált adatok megjelenítése. | 
+| AboutUs  | Rövid bemutató az alkalmazásról | 
 | DeleteAccountConfirmation  | A mezőnek url-nek kell lennie | 
 | LogOutConfirmation  | A mezőnek stringnek kell lennie("") | 
 | RefreshScreen  | A mezőnek url-nek kell lennie | 
@@ -126,9 +140,35 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
 | GameLibraryFragment  | A mezőnek url-nek kell lennie | 
 | ProfileFragment  | A mező nem maradhat üresen | 
 
+# Alkalmazás felépítése diagrammal:
 
-
-
+```mermaid
+graph TD;
+    SplashScreen-->OpenScreenMenu;
+    OpenScreenMenu-->Login;
+    OpenScreenMenu-->SignUp;
+    OpenScreenMenu-->BottomNav;
+    Login-->BottomNav;
+    SignUp-->BottomNav;
+    BottomNav-->NewFragment;
+    BottomNav-->SpeedRunsFragment;
+    BottomNav-->GameLibraryFragment;
+    BottomNav-->ProfileFragment;
+    ProfileFragment-->AboutUs;
+    ProfileFragment-->MyProfileData;
+    ProfileFragment-->SubmitSpeedRun;
+    GameLibraryFragment-->CupHead;
+    GameLibraryFragment-->Hades;
+    GameLibraryFragment-->HalfLife;
+    GameLibraryFragment-->JumpKing;
+    GameLibraryFragment-->Kotor;
+    GameLibraryFragment-->KotorII;
+    GameLibraryFragment-->LegendOfZeldBOTW;
+    GameLibraryFragment-->Minecraft;
+    GameLibraryFragment-->ResidentEvilIIRE;
+    GameLibraryFragment-->Undertale;
+    
+```
 
 
 
