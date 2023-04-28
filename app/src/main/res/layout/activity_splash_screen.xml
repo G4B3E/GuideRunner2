@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="version 0.3.0"
+        android:text="version 1.0.0"
         android:textColor="#ed9b00"
         android:fontFamily="@font/monoregular"
         android:textSize="15sp"

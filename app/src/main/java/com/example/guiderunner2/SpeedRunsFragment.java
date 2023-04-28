@@ -1,5 +1,8 @@
 package com.example.guiderunner2;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +39,7 @@ public class SpeedRunsFragment extends Fragment {
         init(view);
         RequestTask task = new RequestTask(URL, "GET");
         task.execute();
+
         return view;
     }
 
@@ -62,12 +67,12 @@ public class SpeedRunsFragment extends Fragment {
             TextView youtubelink = view.findViewById(R.id.youtubelink_records);
 
 
-            username.setText(actualRecords.getUsername());
+            username.setText("Player : " + actualRecords.getUsername());
             gamename.setText(actualRecords.getGamename());
-            time.setText(actualRecords.getTime());
-            platform.setText(actualRecords.getPlatform());
-            difficulty.setText(actualRecords.getDifficulty());
-            youtubelink.setText(actualRecords.getYoutubelink());
+            time.setText("Time : " + actualRecords.getTime());
+            platform.setText("Platform : " + actualRecords.getPlatform());
+            difficulty.setText("Difficulty/Condition : " + actualRecords.getDifficulty());
+            youtubelink.setText("SpeedRun : " + actualRecords.getYoutubelink());
 
 
             return view;
@@ -135,7 +140,6 @@ public class SpeedRunsFragment extends Fragment {
                                 response.getContent(), RecordsListHelper.class);
                         recordsList.clear();
                         recordsList.addAll(recordsArray.getRecords());
-                        Log.e("valami", "" + recordsList.size());
                         list_view_library.setAdapter(new RecordsAdapter());
                         break;
                 }

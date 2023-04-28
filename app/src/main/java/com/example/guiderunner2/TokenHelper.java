@@ -3,7 +3,7 @@ package com.example.guiderunner2;
 public class TokenHelper {
     public String token;
 
-    public TokenHelper(String token) {
+    public TokenHelper(String token,int accountId) {
         this.token = token;
     }
 

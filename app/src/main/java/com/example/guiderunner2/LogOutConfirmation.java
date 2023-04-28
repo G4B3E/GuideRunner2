@@ -104,7 +104,7 @@ public class LogOutConfirmation extends AppCompatActivity {
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(LogOutConfirmation.this,
                         "Please login or restart the app!", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(LogOutConfirmation.this, BottomNav.class);
+                Intent intent = new Intent(LogOutConfirmation.this, OpenScreenMenu.class);
                 startActivity(intent);
                 finish();
                 return;
@@ -120,8 +120,13 @@ public class LogOutConfirmation extends AppCompatActivity {
                 case "PUT":
                     break;
                 case "DELETE":
-                    SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    SharedPreferences sharedPreferences = getSharedPreferences("Important",Context.MODE_PRIVATE);
+                    SharedPreferences.Editor acceditor = sharedPreferences.edit();
+                    acceditor.remove("accountId");
+                    acceditor.commit();
+
+                    SharedPreferences sharedPreferences2 = getSharedPreferences("Important", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences2.edit();
                     editor.remove("token");
                     editor.commit();
                     Intent intent = new Intent(LogOutConfirmation.this, OpenScreenMenu.class);

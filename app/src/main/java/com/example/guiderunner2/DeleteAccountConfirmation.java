@@ -106,7 +106,7 @@ public class DeleteAccountConfirmation extends AppCompatActivity {
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(DeleteAccountConfirmation.this,
                         "Please create an account or restart the app!", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(DeleteAccountConfirmation.this, BottomNav.class);
+                Intent intent = new Intent(DeleteAccountConfirmation.this, OpenScreenMenu.class);
                 startActivity(intent);
                 finish();
                 return;

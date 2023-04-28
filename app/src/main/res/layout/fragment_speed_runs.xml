@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SpeedRunsFragment"
     android:background="#01121a"
     android:orientation="vertical"
@@ -17,8 +18,6 @@
         android:textSize="50sp"
         android:textColor="#ed9b00"
         android:gravity="top | center"/>
-
-
 
     <ListView
         android:layout_width="match_parent"

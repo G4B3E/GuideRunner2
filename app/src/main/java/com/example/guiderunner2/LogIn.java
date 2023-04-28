@@ -165,7 +165,7 @@ public class LogIn extends AppCompatActivity {
                         Intent intent = new Intent(LogIn.this, BottomNav.class);
                         startActivity(intent);
                         finish();
-                        Toast.makeText(LogIn.this, "Successful login !", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LogIn.this, "Successful login!", Toast.LENGTH_SHORT).show();
                         break;
                     case "PUT":
                         break;

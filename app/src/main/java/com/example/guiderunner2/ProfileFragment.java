@@ -17,11 +17,11 @@ public class ProfileFragment extends Fragment {
 
     private Button AddSpeedRun;
     private Button AboutUs;
-    private Button MyRecords;
 
     private Button ToLogOut;
-    private Button Mydata;
     private Button ToDeleteAccount;
+
+
 
 
     @Override
@@ -30,12 +30,6 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         init(view);
-        Mydata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
         AddSpeedRun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,26 +76,7 @@ public class ProfileFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        MyRecords.setOnClickListener(new View.OnClickListener() {
-            boolean containsToken = isTokenInXmlFile();
-            @Override
-            public void onClick(View v) {
-                if(containsToken){
-                    Toast.makeText(getActivity(), "Hamarosan!", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(getActivity(), "Please create an account or login", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getActivity().getApplicationContext(), OpenScreenMenu.class);
-                    startActivity(intent);
-                }
-            }
-            public boolean isTokenInXmlFile() {
-                SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Important", Context.MODE_PRIVATE);
-                String token = sharedPreferences.getString("token", null);
 
-                return token != null;
-            }
-        });
 
 
         return view;
@@ -109,11 +84,9 @@ public class ProfileFragment extends Fragment {
 
     public void init(View view) {
         AddSpeedRun = view.findViewById(R.id.AddSpeedRun);
-        MyRecords = view.findViewById(R.id.MyRecords);
         AboutUs = view.findViewById(R.id.AboutUs);
         ToLogOut = view.findViewById(R.id.ToLogOut);
         ToDeleteAccount = view.findViewById(R.id.ToDeleteAccount);
-        Mydata = view.findViewById(R.id.Mydata);
     }
 
 }
