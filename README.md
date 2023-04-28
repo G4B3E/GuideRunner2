@@ -3,7 +3,7 @@
 GuideRunner nevő projekt mobil alkalmazása.
 Készítette: Deli Gábor
 
-Admin jogosultság és az adatok megváltoztatása csak webes oldalról lehetséges.
+Admin jogosultság elérése és az adatok megváltoztatása csak webes oldalról lehetséges.
 
 Backend:
 https://github.com/paltsm/guiderunner
@@ -49,57 +49,51 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
     
 ## Activity-k/Osztályok/Fragmentek leírása:
 
-### Activity-k:
+### Activity-k(az itt nem található activity-ket a screenshot-oknál vannak részletezve):
 
 | Fájlok | Leírás |
 | ------------- | ------------- |
-| SplashScreen  | Töltőképernyő | 
-| OpenScreenMenu  | A bejelentkezés, regisztráció vagy pedig a news oldalra irányít el. | 
-| SignUp  | Regisztrációs oldal. | 
-| LogIn  | Bejelentkezési  oldal. | 
-| BottomNav  | Az az activity amely több fragmentre van osztva, navigációs sávval. | 
-| SubmitSpeedRun  | Ez az activity teszi lehetővé a SpeedRunok hozzáadását. | 
-| MyProfileData  | A felhasználó regisztrált adatok megjelenítése. | 
-| AboutUs  | Rövid bemutató az alkalmazásról | 
-| DeleteAccountConfirmation  | A mezőnek url-nek kell lennie | 
-| LogOutConfirmation  | A mezőnek stringnek kell lennie("") | 
-| RefreshScreen  | A mezőnek url-nek kell lennie | 
-| MyProfileData  | A mező nem maradhat üresen | 
-| CupHead  | A mezőnek stringnek kell lennie("") | 
-| Hades  | A mezőnek url-nek kell lennie | 
-| HalfLife  | A mezőnek url-nek kell lennie | 
-| HollowKnight  | A mező nem maradhat üresen | 
-| JumpKing  | A mezőnek stringnek kell lennie("") | 
-| Kotor  | A mezőnek url-nek kell lennie | 
-| KotorII  | A mezőnek url-nek kell lennie | 
-| LegendOfZeldBOTW  | A mezőnek url-nek kell lennie | 
-| Minecraft  | A mező nem maradhat üresen | 
-| ResidentEvilIIRE  | A mezőnek stringnek kell lennie("") | 
-| Undertale  | A mezőnek url-nek kell lennie | 
+| RefreshScreen  | Egy SplashScreen, amelyet a News fragmenten lévő gombbal tudok aktiválni | 
+| CupHead  | A GameLibrary fragmenten megjelenített játék | 
+| Hades  | A GameLibrary fragmenten megjelenített játék | 
+| HalfLife  | A GameLibrary fragmenten megjelenített játék | 
+| HollowKnight  | A GameLibrary fragmenten megjelenített játék | 
+| JumpKing  | A GameLibrary fragmenten megjelenített játék | 
+| Kotor  | A GameLibrary fragmenten megjelenített játék | 
+| KotorII  | A GameLibrary fragmenten megjelenített játék | 
+| LegendOfZeldBOTW  | A GameLibrary fragmenten megjelenített játék | 
+| Minecraft  | A GameLibrary fragmenten megjelenített játék | 
+| ResidentEvilIIRE  | A GameLibrary fragmenten megjelenített játék | 
+| Undertale  | A GameLibrary fragmenten megjelenített játék |  
 
 ### Osztályok:
 
 | Fájlok | Leírás |
 | ------------- | ------------- |
 | LocalHelper  | A mező nem maradhat üresen | 
-| Loginhelper  | A mezőnek stringnek kell lennie("") | 
-| LogOutHelper  | A mezőnek url-nek kell lennie | 
-| News  | A mező nem maradhat üresen | 
-| NewsLisHelper  | A mezőnek stringnek kell lennie("") | 
-| Records  | A mezőnek url-nek kell lennie | 
-| RequestHandler  | A mező nem maradhat üresen | 
-| Response  | A mezőnek stringnek kell lennie("") | 
-| TokenHelper  | A mezőnek url-nek kell lennie | 
-| Users  | A mezőnek stringnek kell lennie("") | 
+| Loginhelper  | Bejelentkezéshez használt segéd osztály | 
+| LogOutHelper  | Kijelentkezéshez használt segéd osztály | 
+| News  | A hírek lekérésére használt segéd osztály | 
+| NewsLisHelper  | A hírek lekérésére használt segéd osztály  | 
+| Records  | A SpeedRun-ok lekérésére használt segéd osztály  | 
+| RequestHandler  | A kapcsolat létrehozásához(Backend és Frontend összekötése) szükséges segéd osztály | 
+| Response  | A kapcsolat létrehozásához(Backend és Frontend összekötése) szükséges segéd osztály | 
+| TokenHelper  | Bejelentkezéshez szükséges token mentésére használt segéd osztály | 
+| Users  | Regisztrációhoz használt segéd osztály | 
+| CustomizedExpandableListAdapter  | Az 'Add SpeedRun' activity-léve lenyítható listviewjoz használt segéd osztály | 
+| ExpandableListDataItems  | Az 'Add SpeedRun' activity-léve lenyítható listviewjoz használt segéd osztály | 
+| LocalHelper  | Az 'Add SpeedRun' activity-léve lenyítható listviewjoz használt segéd osztály | 
+
 
 ### Fragmentek:
 
 | Fájlok | Leírás |
 | ------------- | ------------- |
-| NewsFragment  | A mező nem maradhat üresen | 
-| SpeedRunsFragment  | A mezőnek stringnek kell lennie("") | 
-| GameLibraryFragment  | A mezőnek url-nek kell lennie | 
-| ProfileFragment  | A mező nem maradhat üresen | 
+| NewsFragment  | Hírek megtekintése | 
+| SpeedRunsFragment  | SpeedRun-ok megtekintése | 
+| GameLibraryFragment  | játékok megtekintése | 
+| ProfileFragment  | Egyéb lehetősegek megtekintese(1) | 
+
 
 # Alkalmazás felépítése diagrammal:
 
@@ -136,40 +130,46 @@ graph TD;
 
 ## Nyitó képernyő
 ### A felhasználó itt döntheti el, hogy regsztrálni vagy bejelentkezni szeretne. 
-Viszont ha pedig egyiket se szeretné akkor erre van a 'Skip' gomb.(A funkciók korlátozva vannak,mint például a SpeedRunok hozzáadása) 
+Viszont ha pedig egyiket se szeretné akkor erre van a 'Skip' gomb.(A funkciók korlátozva vannak,mint például a SpeedRun-ok hozzáadása) 
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/openscreen_menu.png"  width="200" height="400" />
 
 ## Regisztráció
-### A felhasználó itt regsztrálhat.
+### A felhasználó itt regisztrálhat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/signup.png"  width="200" height="400" />
 
 ## Bejelentkezés
 ### A felhasználó itt jelentkezhet be.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/login.png"  width="200" height="400" />
 
-## news
-// not yet
+## News
+### A felhasználó itt nézheti a játékokkal kapcsolatos híreket.
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/news.png"  width="200" height="400" />
 
-## speedruns
-// not yet
+## SpeedRuns
+### A felhasználó itt nézheti meg az áltála vagy más játékosok áltál feltöltött SpeedRun-okat.
+<img src="https://github.com/G4B3E/GuideRunner2/blob/master/speedruns.png"  width="200" height="400" />
 
 ## Játék könytár
+### A felhasználó itt nézheti az adminok által közétett játékokat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/gamelibrary.png"  width="200" height="400" />
 
-## Profil 
+## Profil(1)
+### A felhasználó itt éri el az alább lehetőségeket: 
+#### Kijelentkezés, Fiók törlése, SpeedRun hozzáadása, Elérhetőségek és alkalmazás információk
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/profile.png"  width="200" height="400" />
   
 ## Speedrun hozzáadása
+### A felhasználó itt képes hozzádani SpeedRun-okat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/addspeedrun.png"  width="200" height="400" />
 
-## Felhasználó adatok
-// not yet
-
 ## About Us
+### A felhasználó itt képes megtekinteni az alkotók elérhetőségit és az alkalmazás információit.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/addspeedrun.png"  width="200" height="400" />
 
 ## Fiók törlése
+### A felhasználó itt képes törölni a fiókját. 
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/delete_acc.png"  width="200" height="400" />
 
 ## Kijelentkezés
+### A felhasználó itt képes kijelentkezni.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/logout_acc.png"  width="200" height="400" />
