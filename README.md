@@ -80,9 +80,9 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
 | Response  | A kapcsolat létrehozásához(Backend és Frontend összekötése) szükséges segéd osztály | 
 | TokenHelper  | Bejelentkezéshez szükséges token mentésére használt segéd osztály | 
 | Users  | Regisztrációhoz használt segéd osztály | 
-| CustomizedExpandableListAdapter  | Az 'Add SpeedRun' activity-léve lenyítható listviewjoz használt segéd osztály | 
-| ExpandableListDataItems  | Az 'Add SpeedRun' activity-léve lenyítható listviewjoz használt segéd osztály | 
-| LocalHelper  | Az 'Add SpeedRun' activity-léve lenyítható listviewjoz használt segéd osztály | 
+| CustomizedExpandableListAdapter  | Az 'Add SpeedRun' activity-léve lenyítható listviewhoz használt segéd osztály | 
+| ExpandableListDataItems  | Az 'Add SpeedRun' activity-léve lenyítható listviewhoz használt segéd osztály | 
+| LocalHelper  | Az 'Add SpeedRun' activity-léve lenyítható listviewhoz használt segéd osztály | 
 
 
 ### Fragmentek:
@@ -94,6 +94,28 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
 | GameLibraryFragment  | játékok megtekintése | 
 | ProfileFragment  | Egyéb lehetősegek megtekintese(1) | 
 
+## A frontendhez felhasznált elemek:
+
+| Elemek | Leírás |
+| ------------- | ------------- |
+| LinearLayout  | Olyan elrendezés, amely a többi nézetet vízszintesen egyetlen oszlopban vagy függőlegesen egyetlen sorban rendezi el. | 
+| RelativeLayout  | Olyan nézetcsoport, amely az alárendelt nézeteket relatív pozíciókban jeleníti meg. | 
+| FrameLayout  | A FrameLayout úgy van kialakítva, hogy blokkoljon egy területet a képernyőn egyetlen elem megjelenítéséhez. | 
+| ConstraintLayout  | A ConstraintLayout lehetővé teszi a widgetek rugalmas elhelyezését és méretét. | 
+| TextInputLayout  | Elrendezés, amely egy TextInputEditText, EditText vagy leszármazottat burkol, hogy lebegő címkét jelenítsen meg, ha a tipp el van rejtve, miközben a felhasználó szöveget ír be. | 
+| GridLayout  | A GridLayout végtelenül vékony vonalak halmazából áll, amelyek a megtekintési területet cellákra választják el. | 
+| MaterialTextView  | A MaterialTextView az AppCompatTextView származéka, amely szöveget jelenít meg a felhasználó számára. | 
+| TextView  | Felhasználói felület elem, amely szöveget jelenít meg a felhasználó számára. | 
+| View  | Ez az osztály a felhasználói felület összetevőinek alapvető építőeleme. | 
+| BottomNavigationView  | Egy szabványos alsó navigációs sávot jelöl az alkalmazáshoz. | 
+| ScrollView  | Nézetcsoport, amely lehetővé teszi a benne elhelyezett nézethierarchia görgetését. | 
+| ExpandableListView  | Egy nézet, amely egy függőlegesen görgető kétszintű lista elemeit jeleníti meg. | 
+| ListView  | Függőlegesen görgethető nézetgyűjteményt jelenít meg, ahol minden nézet közvetlenül az előző nézet alatt helyezkedik el a listában. | 
+| ImageView  | Képforrásokat jelenít meg, például Bitmap vagy Drawable erőforrásokat. | 
+| LottieAnimationView  | A lottie-android könyvtár egy LottieAnimationView-t biztosít, amely gondoskodik az animációk megjelenítéséről. | 
+| ImageButton  | Megjelenít egy gombot egy képpel (szöveg helyett), amelyet a felhasználó megnyomhat vagy rákattinthat. | 
+| MaterialButton  | Ez az osztály frissített anyagstílusokat biztosít a konstruktor gombjához. | 
+| TextInputEditText  | Az EditText egy speciális alosztálya, amelyet a TextInputLayout gyermekeként való használatra terveztek. | 
 
 # Alkalmazás felépítése diagrammal:
 
@@ -129,47 +151,52 @@ graph TD;
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/loading_screen.png"  width="200" height="400" />
 
 ## Nyitó képernyő
-### A felhasználó itt döntheti el, hogy regsztrálni vagy bejelentkezni szeretne. 
-Viszont ha pedig egyiket se szeretné akkor erre van a 'Skip' gomb.(A funkciók korlátozva vannak,mint például a SpeedRun-ok hozzáadása) 
+#### A felhasználó itt döntheti el, hogy regsztrálni vagy bejelentkezni szeretne. 
+#### Viszont ha pedig egyiket se szeretné akkor erre van a 'Skip' gomb.
+#### (A funkciók korlátozva vannak,mint például a SpeedRun-ok hozzáadása) 
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/openscreen_menu.png"  width="200" height="400" />
 
 ## Regisztráció
-### A felhasználó itt regisztrálhat.
+#### A felhasználó itt regisztrálhat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/signup.png"  width="200" height="400" />
 
 ## Bejelentkezés
-### A felhasználó itt jelentkezhet be.
+#### A felhasználó itt jelentkezhet be.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/login.png"  width="200" height="400" />
 
 ## News
-### A felhasználó itt nézheti a játékokkal kapcsolatos híreket.
+#### A felhasználó itt nézheti a játékokkal kapcsolatos híreket.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/news.png"  width="200" height="400" />
 
 ## SpeedRuns
-### A felhasználó itt nézheti meg az áltála vagy más játékosok áltál feltöltött SpeedRun-okat.
+#### A felhasználó itt nézheti meg az áltála vagy más játékosok áltál feltöltött SpeedRun-okat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/speedruns.png"  width="200" height="400" />
 
 ## Játék könytár
-### A felhasználó itt nézheti az adminok által közétett játékokat.
+#### A felhasználó itt nézheti az adminok által közétett játékokat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/gamelibrary.png"  width="200" height="400" />
 
 ## Profil(1)
-### A felhasználó itt éri el az alább lehetőségeket: 
+#### A felhasználó itt éri el az alább lehetőségeket: 
 #### Kijelentkezés, Fiók törlése, SpeedRun hozzáadása, Elérhetőségek és alkalmazás információk
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/profile.png"  width="200" height="400" />
   
 ## Speedrun hozzáadása
-### A felhasználó itt képes hozzádani SpeedRun-okat.
+#### A felhasználó itt képes hozzádani SpeedRun-okat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/addspeedrun.png"  width="200" height="400" />
 
 ## About Us
-### A felhasználó itt képes megtekinteni az alkotók elérhetőségit és az alkalmazás információit.
+#### A felhasználó itt képes megtekinteni az alkotók elérhetőségit és az alkalmazás információit.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/addspeedrun.png"  width="200" height="400" />
 
 ## Fiók törlése
-### A felhasználó itt képes törölni a fiókját. 
+#### A felhasználó itt képes törölni a fiókját. 
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/delete_acc.png"  width="200" height="400" />
 
 ## Kijelentkezés
-### A felhasználó itt képes kijelentkezni.
+#### A felhasználó itt képes kijelentkezni.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/logout_acc.png"  width="200" height="400" />
+
+## A leírásokhoz felhasznált források:
+#### https://lottiefiles.com/blog/working-with-lottie/getting-started-with-lottie-animations-in-android-app
+#### https://developer.android.com/reference
