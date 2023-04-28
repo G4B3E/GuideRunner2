@@ -177,26 +177,9 @@ public class SubmitSpeedRun extends AppCompatActivity {
             super.onPreExecute();
 
         }
-
-        protected void Contain() {
-            SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
-            sharedPreferences.contains("token");
-
-        }
-
-        public boolean isTokenInXmlFile() {
-            SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
-            String token = sharedPreferences.getString("token", null);
-
-            return token != null;
-        }
-
-
         @Override
         protected void onPostExecute(Response response) {
             super.onPostExecute(response);
-            boolean containsToken = isTokenInXmlFile();
-            Log.e("valami ",containsToken+"");
             if (response.getResponseCode() >= 400) {
                 Toast.makeText(SubmitSpeedRun.this,
                         "An error occurred while processing the request!", Toast.LENGTH_SHORT).show();
@@ -204,7 +187,8 @@ public class SubmitSpeedRun extends AppCompatActivity {
                         "" + response.getContent(), Toast.LENGTH_LONG).show();
                 return;
             }
-            if (containsToken) {
+
+            else {
                 switch (requestType) {
                     case "GET":
                         break;
@@ -220,13 +204,6 @@ public class SubmitSpeedRun extends AppCompatActivity {
                     case "DELETE":
                         break;
                 }
-
-            } else {
-                Toast.makeText(SubmitSpeedRun.this, "Please create an account or login", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SubmitSpeedRun.this, OpenScreenMenu.class);
-                startActivity(intent);
-                finish();
-                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 
             }
 

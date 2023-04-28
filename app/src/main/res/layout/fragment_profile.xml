@@ -31,6 +31,17 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="My data"
+                android:id="@+id/Mydata"
+                app:cornerRadius="100dp"
+                android:backgroundTint="#6AA4D3"
+                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Add SpeedRun"
                 android:id="@+id/AddSpeedRun"
                 app:cornerRadius="100dp"
@@ -43,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="My Records"
-                android:id="@+id/Records"
+                android:id="@+id/MyRecords"
                 app:cornerRadius="100dp"
                 android:backgroundTint="#ed9b00"
                 android:textColor="@color/black"
@@ -59,6 +70,7 @@
                 android:textColor="@color/black"
                 android:fontFamily="monospace"
                 />
+
 
     </LinearLayout>
 

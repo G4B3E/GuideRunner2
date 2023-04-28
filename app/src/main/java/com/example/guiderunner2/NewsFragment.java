@@ -1,11 +1,13 @@
 package com.example.guiderunner2;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.gson.Gson;
@@ -27,7 +30,9 @@ public class NewsFragment extends Fragment {
 
     public String URL = "http://10.0.2.2:3000/news";
 
-    SwipeRefreshLayout mSwipeRefreshLayout;
+    private Button Refresh;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,12 +41,19 @@ public class NewsFragment extends Fragment {
         init(view);
         RequestTask task = new RequestTask(URL, "GET");
         task.execute();
+        Refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), RefreshScreen.class);
+                startActivity(intent);
+            }
+        });
         return view;
-
     }
 
     public void init(View view) {
         list_view_news = view.findViewById(R.id.list_view_news);
+        Refresh = view.findViewById(R.id.Refresh);
     }
 
     private class NewsAdapter extends ArrayAdapter<News> {

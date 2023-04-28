@@ -24,7 +24,7 @@ import java.util.List;
 public class SpeedRunsFragment extends Fragment {
 
     private ListView list_view_library;
-    private final List<SpeedRuns> speedrunslist = new ArrayList<>();
+    private final List<Records> recordsList = new ArrayList<>();
 
     public String URL = "http://10.0.2.2:3000/records";
 
@@ -42,10 +42,10 @@ public class SpeedRunsFragment extends Fragment {
         list_view_library = view.findViewById(R.id.list_view_library);
     }
 
-    private class SpeedRunsAdapter extends ArrayAdapter<SpeedRuns> {
+    private class RecordsAdapter extends ArrayAdapter<Records> {
 
-        public SpeedRunsAdapter() {
-            super(getActivity(), R.layout.records_adapter, speedrunslist);
+        public RecordsAdapter() {
+            super(getActivity(), R.layout.records_adapter, recordsList);
         }
 
         @NonNull
@@ -53,7 +53,7 @@ public class SpeedRunsFragment extends Fragment {
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             LayoutInflater inflater = getLayoutInflater();
             View view = inflater.inflate(R.layout.records_adapter, null, false);
-            SpeedRuns actualSpeedruns = speedrunslist.get(position);
+            Records actualRecords = recordsList.get(position);
             TextView username = view.findViewById(R.id.username_records);
             TextView gamename = view.findViewById(R.id.gamename_records);
             TextView time = view.findViewById(R.id.time_records);
@@ -62,12 +62,12 @@ public class SpeedRunsFragment extends Fragment {
             TextView youtubelink = view.findViewById(R.id.youtubelink_records);
 
 
-            username.setText(actualSpeedruns.getUsername());
-            gamename.setText(actualSpeedruns.getGamename());
-            time.setText(actualSpeedruns.getTime());
-            platform.setText(actualSpeedruns.getPlatform());
-            difficulty.setText(actualSpeedruns.getDifficulty());
-            youtubelink.setText(actualSpeedruns.getYoutubelink());
+            username.setText(actualRecords.getUsername());
+            gamename.setText(actualRecords.getGamename());
+            time.setText(actualRecords.getTime());
+            platform.setText(actualRecords.getPlatform());
+            difficulty.setText(actualRecords.getDifficulty());
+            youtubelink.setText(actualRecords.getYoutubelink());
 
 
             return view;
@@ -131,12 +131,12 @@ public class SpeedRunsFragment extends Fragment {
             } else {
                 switch (requestType) {
                     case "GET":
-                        SpeedRunsListHelper speedrunArray = converter.fromJson(
-                                response.getContent(), SpeedRunsListHelper.class);
-                        speedrunslist.clear();
-                        speedrunslist.addAll(speedrunArray.getSpeedruns());
-                        Log.e("valami", "" + speedrunslist.size());
-                        list_view_library.setAdapter(new SpeedRunsAdapter());
+                        RecordsListHelper recordsArray = converter.fromJson(
+                                response.getContent(), RecordsListHelper.class);
+                        recordsList.clear();
+                        recordsList.addAll(recordsArray.getRecords());
+                        Log.e("valami", "" + recordsList.size());
+                        list_view_library.setAdapter(new RecordsAdapter());
                         break;
                 }
             }

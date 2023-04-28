@@ -1,5 +1,7 @@
 package com.example.guiderunner2;
 
+import java.util.List;
+
 public class Records {
 
     private String username;
@@ -64,5 +66,12 @@ public class Records {
 
     public void setYoutubelink(String youtubelink) {
         this.youtubelink = youtubelink;
+    }
+}
+class RecordsListHelper {
+    private List<Records> records;
+
+    public List<Records> getRecords() {
+        return records;
     }
 }

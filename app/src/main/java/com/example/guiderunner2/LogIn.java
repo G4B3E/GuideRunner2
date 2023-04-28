@@ -157,10 +157,11 @@ public class LogIn extends AppCompatActivity {
                         break;
                     case "POST":
                         TokenHelper token = converter.fromJson(response.getContent(), TokenHelper.class);
-                        SharedPreferences sharedPreferences = getSharedPreferences("Important", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        SharedPreferences sharedPreferences2 = getSharedPreferences("Important", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences2.edit();
                         editor.putString("token", token.getToken());
                         editor.commit();
+
                         Intent intent = new Intent(LogIn.this, BottomNav.class);
                         startActivity(intent);
                         finish();
