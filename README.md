@@ -3,6 +3,8 @@
 GuideRunner nevő projekt mobil alkalmazása.
 Készítette: Deli Gábor
 
+Admin jogosultság és az adatok megváltoztatása csak webes oldalról lehetséges.
+
 Backend:
 https://github.com/paltsm/guiderunner
 
@@ -114,7 +116,6 @@ graph TD;
     BottomNav-->GameLibraryFragment;
     BottomNav-->ProfileFragment;
     ProfileFragment-->AboutUs;
-    ProfileFragment-->MyProfileData;
     ProfileFragment-->SubmitSpeedRun;
     GameLibraryFragment-->CupHead;
     GameLibraryFragment-->Hades;
@@ -134,12 +135,16 @@ graph TD;
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/loading_screen.png"  width="200" height="400" />
 
 ## Nyitó képernyő
+### A felhasználó itt döntheti el, hogy regsztrálni vagy bejelentkezni szeretne. 
+Viszont ha pedig egyiket se szeretné akkor erre van a 'Skip' gomb.(A funkciók korlátozva vannak,mint például a SpeedRunok hozzáadása) 
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/openscreen_menu.png"  width="200" height="400" />
 
 ## Regisztráció
+### A felhasználó itt regsztrálhat.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/signup.png"  width="200" height="400" />
 
 ## Bejelentkezés
+### A felhasználó itt jelentkezhet be.
 <img src="https://github.com/G4B3E/GuideRunner2/blob/master/login.png"  width="200" height="400" />
 
 ## news
