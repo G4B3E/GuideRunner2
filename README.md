@@ -50,7 +50,7 @@ Ez a dokumentáció egy a Java nyelven írott, Android Studióban kíszett mobil
 ## Activity-k/Osztályok/Fragmentek leírása:
 
 ### Activity-k:
-####(az itt nem található activity-ket a screenshot-oknál vannak részletezve)
+##### Az itt nem található activity-ket a screenshot-oknál vannak részletezve
 
 | Fájlok | Leírás |
 | ------------- | ------------- |
